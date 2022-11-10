@@ -1,0 +1,158 @@
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Inscription du joueur</h2>
+              <form>
+              
+               <!-- 2 column grid layout with text inputs for the ID and Team Name -->
+               <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputID" class="form-control" />
+                      <label class="form-label" for="form3Example1">Identifiant du Joueur</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputTeamName" class="form-control" />
+                      <label class="form-label" for="form3Example2">Nom de l'équipe</label>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+               <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputName" class="form-control" />
+                      <label class="form-label" for="form3Example1">Nom</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputPrenoun" class="form-control" />
+                      <label class="form-label" for="form3Example2">Prénom</label>
+                    </div>
+                  </div>
+                </div>
+                
+                  <!-- 2 column grid layout with text inputs for the position and  -->
+               <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputPoste" class="form-control" />
+                      <label class="form-label" for="form3Example1">Poste</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputAge" class="form-control" />
+                      <label class="form-label" for="form3Example2">Age</label>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <!-- 2 column grid layout with text inputs for the Zip code and The City  -->
+                 <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputCodePostal" class="form-control" />
+                      <label class="form-label" for="form3Example1">Code postal</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="inputVille" class="form-control" />
+                      <label class="form-label" for="form3Example2">Ville</label>
+                    </div>
+                  </div>
+                </div>
+                
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="inputEmail" class="form-control" />
+                  <label class="form-label" for="form3Example3">Address Email</label>
+                </div>
+                
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="inputPassword" class="form-control" />
+                  <label class="form-label" for="form3Example4">Mot de passe</label>
+                </div>
+                
+                <!-- Password confirmation input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="inputPassword" class="form-control" />
+                  <label class="form-label" for="form3Example4">Confirmez votre mot de passe</label>
+                </div>
+  
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4" >
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked   />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+  
+                <!-- Submit button -->
+                <!-- Question : Ligne 127 - pourquoi le boutton n'a pas marché lorsque j'ai mis le type="submit" ? -->
+                <button type="button" class="btn btn-primary btn-block mb-4" onclick="window.location.href = 'monProfil.html';" >
+                  Inscription
+                </button>
+  
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>Ou s'inscrire avec:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <iframe width="500" height="200" src="https://www.youtube.com/embed/9NT_7USctcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+          <iframe width="500" height="200" src="https://www.youtube.com/embed/xmQ-Ax70hbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+          <iframe width="500" height="200" src="https://www.youtube.com/embed/NkgHqVNW3MM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+  

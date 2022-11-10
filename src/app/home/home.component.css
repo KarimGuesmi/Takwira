@@ -1,0 +1,24 @@
+h1{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    background: rgb(122, 121, 196);;
+    
+  }
+img{
+    border: 2px solid black;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+iframe{
+    border: 2px solid black;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 40%;
+}

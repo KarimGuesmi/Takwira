@@ -1,0 +1,116 @@
+<div id="booking" class="section" >
+    
+    <div class="section-center">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="booking-cta">
+                        <h1>Réservez votre match en quelques clics</h1>
+                        <p>Remplissez les coordonnées du terrain de votre choix et obtenez une réduction de 20% du total a payer avant 48h du match</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="booking-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text">
+                                        <span class="form-label">Nom</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="email">
+                                        <span class="form-label">Email</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="tel">
+                                        <span class="form-label">Phone</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Nom du terrain</span>
+                                        <select class="form-control">
+                                            <option>Ooredoo</option>
+                                            <option>San Siro</option>
+                                            <option>Soccer6</option>
+                                            <option>Mouihbi</option>
+                                            <option>Golden Ball</option>
+                                            <option>Wembley</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="date" required>
+                                        <span class="form-label">Date</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Choisissez l'heure</span>
+                                        <select class="form-control">
+                                            <option>09-10</option>
+                                            <option>10-11</option>
+                                            <option>11-12</option>
+                                            <option>12-13</option>
+                                            <option>13-14</option>
+                                            <option>14-15</option>
+                                            <option>15-16</option>
+                                            <option>16-17</option>
+                                            <option>17-18</option>
+                                            <option>18-19</option>
+                                            <option>19-20</option>
+                                            <option>20-21</option>
+                                            <option>21-22</option>
+                                            <option>22-23</option>
+                                            <option>23-00</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn">Réserver</button>
+                            </div>
+                            <br>
+                            <div class="form-btn">
+                                <button class="submit-btn" style="background-color:red;" onclick="window.location.href = '';">Annuler</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $('.form-control').each(function () {
+        floatedLabel($(this));
+    });
+
+    $('.form-control').on('input', function () {
+        floatedLabel($(this));
+    });
+
+    function floatedLabel(input) {
+        var $field = input.closest('.form-group');
+        if (input.val()) {
+            $field.addClass('input-not-empty');
+        } else {
+            $field.removeClass('input-not-empty');
+        }
+    }
+</script>
