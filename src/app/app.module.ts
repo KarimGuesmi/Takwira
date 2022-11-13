@@ -15,6 +15,10 @@ import { EspaceTournoisComponent } from './espace-tournois/espace-tournois.compo
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarteTerrainComponent } from './carte-terrain/carte-terrain.component';
+import { ProfilJoueurComponent } from './profil-joueur/profil-joueur.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { FooterComponent } from './footer/footer.component';
     EspaceTournoisComponent,
     InscriptionComponent,
     ConnexionComponent,
-    FooterComponent
+    FooterComponent,
+    CarteTerrainComponent,
+    ProfilJoueurComponent,
+    TermsAndConditionsComponent,
+    ReglementInterieurComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,10 @@
 <div class="">
     <section style="height:80px;"></section>
-	<div class="row" style="text-align:center;">
-		<h2>Takwira</h2>
-	</div>
-    <!----------- Footer ------------>
+   <!----------- Footer ------------>
     <footer class="footer-bs">
         <div class="row">
         	<div class="col-md-3 footer-brand animated fadeInLeft">
-            	<h2>Logo</h2>
+            	<img src="{{logoNav}}" alt="LogoTakwira" width="150" height="150"  style="margin-left: 10%;"/>
                 <p>Takwira, c'est une application qui vous permettra de réserver votre terrain de football en quelques clics. 
                     Vous pouvez consulter notre planning général et voir tout les terrains disponibles dans
                     votre région. Vous pouvez aussi voir la liste de tout les joueurs inscri ainsi que la liste de tout les terrains.
@@ -19,21 +16,21 @@
             	<h4>Menu —</h4>
             	<div class="col-md-6">
                     <ul class="pages">
-                        <li><a href="#">Réservation</a></li>
-                        <li><a href="#">Planning</a></li>
-                        <li><a href="#">Liste des terrains</a></li>
-                        <li><a href="#">Liste des joueurs</a></li>
-                        <li><a href="#">Espace tournois</a></li>
-                        <li><a href="#">Inscription</a></li>
-                        <li><a href="#">Connexion</a></li>
+                        <li><a routerLink="/reserver">Réservation</a></li>
+                        <li><a routerLink="/planning">Planning</a></li>
+                        <li><a routerLink="/liste-terrains">Liste des terrains</a></li>
+                        <li><a routerLink="/liste-joueurs">Liste des joueurs</a></li>
+                        <li><a routerLink="/espace-tournois">Espace tournois</a></li>
+                        <li><a routerLink="/inscription">Inscription</a></li>
+                        <li><a routerLink="/connexion">Connexion</a></li>
                     </ul>
                 </div>
             	<div class="col-md-6">
                     <ul class="list">
                         <li><a href="#">A propos</a></li>
                         <li><a href="#">Nous contacter</a></li>
-                        <li><a href="#">Termes & Conditions</a></li>
-                        <li><a href="#">Réglement</a></li>
+                        <li><a routerLink="/terms-and-conditions">Termes & Conditions</a></li>
+                        <li><a routerLink="/reglement-interieur">Réglement</a></li>
                     </ul>
                 </div>
             </div>

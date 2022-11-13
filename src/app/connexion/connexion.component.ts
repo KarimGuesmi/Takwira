@@ -12,4 +12,5 @@ export class ConnexionComponent implements OnInit {
   ngOnInit(): void {
   }
   image:any="../assets/images/takwira.png" ;
+  buffon:any="../assets/images/buffon.png" ;
 }

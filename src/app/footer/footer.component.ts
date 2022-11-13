@@ -11,5 +11,5 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logoNav:any="../assets/images/logo.png" ;
 }

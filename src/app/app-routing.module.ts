@@ -8,6 +8,10 @@ import { ListeJoueursComponent } from './liste-joueurs/liste-joueurs.component';
 import { EspaceTournoisComponent } from './espace-tournois/espace-tournois.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { CarteTerrainComponent } from './carte-terrain/carte-terrain.component';
+import { ProfilJoueurComponent } from './profil-joueur/profil-joueur.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
 
 const routes: Routes = [
 
@@ -19,6 +23,10 @@ const routes: Routes = [
   {path : "espace-tournois", component : EspaceTournoisComponent},
   {path : "inscription", component : InscriptionComponent},
   {path : "connexion", component : ConnexionComponent},
+  {path : "carte-terrain", component : CarteTerrainComponent},
+  {path : "profil-joueur", component : ProfilJoueurComponent},
+  {path : "terms-and-conditions", component : TermsAndConditionsComponent},
+  {path : "reglement-interieur", component : ReglementInterieurComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];
 
