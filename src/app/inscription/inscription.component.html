@@ -29,96 +29,226 @@
 			  ">
 			<div class="card-body p-5 shadow-5 text-center">
 			  <h3 class="fw-bold mb-5">Veuillez saisir vos coordonnées</h3>
-			  <form>
 			  
-			   <!-- 2 column grid layout with text inputs for the ID and Team Name -->
+			 
+			 
+			  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+			  
+			   <!-- 2 colonnes layout pour l'identifiant et nom de l'équipe -->
 			   <div class="row">
+				<!-- Identifiant checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputID" class="form-control" placeholder="Identifiant du Joueur"/>
+					  <input type="text" id="inputID" class="form-control" formControlName="identifiant" 
+					  placeholder="Identifiant du Joueur"
+					  [ngClass]="{ 'is-invalid': submitted && f['identifiant'].errors }"/>
+					  	<div *ngIf="submitted && f['identifiant'].errors" class="invalid-feedback">
+							<div *ngIf="f['identifiant'].errors['required']">Identifiant est nécessaire</div>
+						</div>
 					</div>
 				  </div>
+
+				<!-- Nom equipe checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputTeamName" class="form-control" placeholder="Nom de l'équipe"/>
+					  <input type="text" id="inputTeamName" class="form-control" 
+					  formControlName="nomequipe"  placeholder="Nom de l'équipe"
+					  [ngClass]="{ 'is-invalid': submitted && f['nomequipe'].errors }"/>
+						<div *ngIf="submitted && f['nomequipe'].errors" class="invalid-feedback">
+							<div *ngIf="f['nomequipe'].errors['required']">Nom équipe est nécessaire</div>
+						</div>
 					</div>
 				  </div>
 				</div>
 				
 				
-				<!-- 2 column grid layout with text inputs for the first and last names -->
+				<!-- 2 colonnes layout pour le nom et prénom -->
 			   <div class="row">
+				<!-- Nom du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputName" class="form-control" placeholder="Nom"/>					  
+					  <input type="text" id="inputName" class="form-control" placeholder="Nom" 
+					  formControlName="nom" 
+					  [ngClass]="{ 'is-invalid': submitted && f['nom'].errors }" />
+						<div *ngIf="submitted && f['nom'].errors" class="invalid-feedback">
+							<div *ngIf="f['nom'].errors['required']">Nom du joueur est nécessaire</div>
+						</div>					  
 					</div>
 				  </div>
+				  <!-- Prénom du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputPrenoun" class="form-control" placeholder="Prénom"/>
+					  <input type="text" id="inputPrenoun" class="form-control" placeholder="Prénom"
+					  formControlName="prenom" 
+					  [ngClass]="{ 'is-invalid': submitted && f['prenom'].errors }" />
+						<div *ngIf="submitted && f['prenom'].errors" class="invalid-feedback">
+							<div *ngIf="f['prenom'].errors['required']">Prénom du joueur est nécessaire</div>
+						</div>
 					</div>
 				  </div>
 				</div>
 				
-				  <!-- 2 column grid layout with text inputs for the position and  -->
+				  <!-- 2 colonnes layout pour le poste du joueur et son age -->
 			   <div class="row">
+				<!-- Poste du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputPoste" class="form-control" placeholder="Poste"/>
+					  <input type="text" id="inputPoste" class="form-control" placeholder="Poste"
+					  formControlName="poste" 
+					  [ngClass]="{ 'is-invalid': submitted && f['poste'].errors }"/>
+						<div *ngIf="submitted && f['poste'].errors" class="invalid-feedback">
+							<div *ngIf="f['poste'].errors['required']">Poste du joueur est nécessaire</div>
+						</div>
 					</div>
 				  </div>
+				  <!-- Age du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputAge" class="form-control" placeholder="Age"/>
+					  <input type="number" ngModel min="6" max= "50" id="inputAge" class="form-control" placeholder="Age" (keypress)="keyPress($event)"
+					  formControlName="age" 
+					  [ngClass]="{ 'is-invalid': submitted && f['age'].errors }"/>
+						<div *ngIf="submitted && f['age'].errors" class="invalid-feedback">
+							<div *ngIf="f['age'].errors['required']">Age du joueur est nécessaire [6 - 150]</div>
+						</div>
 					</div>
 				  </div>
 				</div>
 				
+				  <!-- 2 colonnes layout pour le telephone du joueur et son cité -->
+				  <div class="row">
+					<!-- téléphone du joueur checking -->
+					  <div class="col-md-6 mb-4">
+						<div class="form-outline">
+						  <input type="text" (keypress)="keyPress($event)" id="inputPhone" class="form-control" 
+						  placeholder="Numéro téléphone" formControlName="phone" 
+						  [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }"/>
+							<div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+								<div *ngIf="f['phone'].errors['required']">Numéro téléphone est nécessaire</div>
+							<div *ngIf="f['phone'].errors['pattern'] || f['phone'].errors['maxlength'] || f['phone'].errors['minlength']">
+								Le numéro de téléphone doit être composé de 8 chiffres 
+							</div>							
+							
+								
+							
+							</div>
+						</div>
+					  </div>
+					  <!-- Cité du joueur checking -->
+					  <div class="col-md-6 mb-4">
+						<div class="form-outline">
+						  <input type="text" id="inputcite" class="form-control" placeholder="Cité"
+						  formControlName="cite" 
+						  [ngClass]="{ 'is-invalid': submitted && f['cite'].errors }"/>
+							<div *ngIf="submitted && f['cite'].errors" class="invalid-feedback">
+								<div *ngIf="f['cite'].errors['required']">Cité du Joueur est nécessaire</div>
+							</div>
+						</div>
+					  </div>
+					</div>
+
 				
-				<!-- 2 column grid layout with text inputs for the Zip code and The City  -->
+				<!-- 2 colonnes layout pour le code postal et la ville-->
 				 <div class="row">
+				<!-- Code Postal du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputCodePostal" class="form-control" placeholder="Code postal"/>
+					  <input type="text" id="inputCodePostal" class="form-control" (keypress)="keyPress($event)"
+					  placeholder="Code postal" formControlName="code" 
+					  [ngClass]="{ 'is-invalid': submitted && f['code'].errors }"/>
+						<div *ngIf="submitted && f['code'].errors" class="invalid-feedback">
+							<div *ngIf="f['code'].errors['required']">Code Postal du joueur est nécessaire</div>
+							<div *ngIf="f['code'].errors['pattern'] || f['code'].errors['maxlength'] || f['code'].errors['minlength']">
+								Le code postal doit être composé entre 4 et 5 chiffres 
+							</div>	
+						</div>
 					</div>
 				  </div>
+				<!-- Ville du joueur checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
-					  <input type="text" id="inputVille" class="form-control" placeholder="Ville"/>
+					  <input type="text" id="inputVille" class="form-control" placeholder="Ville"
+					  formControlName="ville" 
+					  [ngClass]="{ 'is-invalid': submitted && f['ville'].errors }"/>
+						<div *ngIf="submitted && f['ville'].errors" class="invalid-feedback">
+							<div *ngIf="f['ville'].errors['required']">Ville du joueur est nécessaire</div>
+						</div>
 					</div>
 				  </div>
 				</div>
 				
-  
+				<!-- 1 colonne pour l'email -->
 				<!-- Email input -->
 				<div class="form-outline mb-4">
-				  <input type="email" id="inputEmail" class="form-control" placeholder="Address Email"/>
+				  <input type="email" id="inputEmail" class="form-control" placeholder="Addresse Email"
+				  formControlName="email" 
+				  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+					<div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+						<div *ngIf="f['email'].errors['required']">Adresse e-mail est nécessaire</div>
+						<div *ngIf="f['email'].errors['email']">
+							L'adresse email doit être valide <br>
+							Exemple@exemple.com
+						</div>
+					</div>
 				</div>
 				
+				<!-- 1 colonne pour le mot de passe -->
 				<!-- Password input -->
 				<div class="form-outline mb-4">
-				  <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe"/>
+				  <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe"
+				  formControlName="password" 
+				  [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"/>
+					<div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+						<div *ngIf="f['password'].errors['required']">Password is required</div>
+						<div *ngIf="f['password'].errors['minlength']">Le mot de passe doit être composé au moins de 6 caratéres</div>
+					</div>
 				</div>
 				
-				<!-- Password confirmation input -->
+				<!-- 1 colonne pour la confirmation du mot de passe -->
 				<div class="form-outline mb-4">
-				  <input type="password" id="inputPassword" class="form-control" placeholder="Confirmez votre mot de passe"/>
+				  <input type="password" id="inputPassword" class="form-control"
+				   formControlName="confirmPassword" 
+				  placeholder="Confirmez votre mot de passe"
+				  [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"/>
+					<div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+						<div *ngIf="f['confirmPassword'].errors['required']">
+							Confirmation du mot de passe est nécessaire
+						</div>
+						<div *ngIf="f['confirmPassword'].errors['mustMatch']">
+							Mot de passe ne correspond pas
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-check">
+					<div class="termsconditions">
+						<input type="checkbox" formControlName="acceptTerms" id="acceptTerms" 
+							class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+						<label for="acceptTerms" class="form-check-label">
+							Accepter les termes et conditions<br>
+							<a routerLink="/terms-and-conditions">Nos Termes et conditions</a><br><br>					
+						</label>
+					</div>
+					<div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">
+						Accept Ts & Cs is required
+					</div>
 				</div>
   
 				<!-- Checkbox -->
 				<div class="form-check d-flex justify-content-center mb-4" >
 				  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked   />
 				  <label class="form-check-label" for="form2Example33">
-					Subscribe to our newsletter
+					Inscrivez vous aux newsletters
 				  </label>
 				</div>
   
 				<!-- Submit button -->
 				<!-- Question : Ligne 127 - pourquoi le boutton n'a pas marché lorsque j'ai mis le type="submit" ? -->
-				<button type="button" class="btn btn-primary btn-block mb-4" onclick="window.location.href = 'monProfil.html';" >
-				  Inscription
-				</button>
-  
+				<div>
+					<button class="btn btn-primary btn-block mb-0">
+					Inscription
+					</button>
+					<button class="btn btn-secondary" type="reset" (click)="onReset()">Annuler</button>
+				</div><br>
 				<!-- Register buttons -->
 				<div class="text-center">
 				  <p>Ou s'inscrire avec:</p>
@@ -135,6 +265,10 @@
 				  </button>
 				</div>
 			  </form>
+
+
+
+
 			</div>
 		  </div>
 		</div>		

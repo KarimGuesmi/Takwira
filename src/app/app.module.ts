@@ -19,6 +19,8 @@ import { CarteTerrainComponent } from './carte-terrain/carte-terrain.component';
 import { ProfilJoueurComponent } from './profil-joueur/profil-joueur.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
+import { TestComponent } from './test/test.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,12 +39,15 @@ import { ReglementInterieurComponent } from './reglement-interieur/reglement-int
     CarteTerrainComponent,
     ProfilJoueurComponent,
     TermsAndConditionsComponent,
-    ReglementInterieurComponent
+    ReglementInterieurComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

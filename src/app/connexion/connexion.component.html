@@ -13,29 +13,50 @@
                   <h4 class="mt-1 mb-5 pb-1">Takwira</h4>
                 </div>
 
-                <form>
+                 <!-- Sign In Form -->
+                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                   <p>Veuillez saisir vos coordonnées</p>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Email" />
+                    <input type="email" class="form-control" id="floatingInput" 
+                    placeholder="name@example.com" formControlName="email" 
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  id="inputEmail4">
+
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Adresse mail est nécessaire</div>
+                      <div *ngIf="f.email.errors.email">L'adresse email ne respecte pas les normes.<br>Exemple@exemple.com</div>
+                   </div>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" placeholder="mot de passe" />
+                    <input type="password" class="form-control" id="floatingPassword" 
+                    placeholder="Password" formControlName="password"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="inputPassword4">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Un mot de passe est nécessaire</div>
+                   </div>
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" >Se connecter</button>
-                    <a class="text-muted" href="#!">Mot de passe oublié ?</a>
+                    <button  type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"  style="width: 100%;">
+                      Se connecter
+                    </button>
+                    <div>
+                      <a class="text-muted" href="#!">Mot de passe oublié ?</a>
+                    </div>
+                    
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Vous n'êtes pas inscrit ?</p>
-                    <button type="button" class="btn btn-outline-danger" routerLink="/inscription">Créer Compte</button>
+                    <button  type="submit" class="btn btn-outline-danger" routerLink="/inscription">
+                      Créer Compte
+                    </button>
                   </div>
 
                 </form>
+                 <!-- END Sign In Form -->
 
               </div>
             </div>
