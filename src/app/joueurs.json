@@ -1,0 +1,82 @@
+[  
+  {  
+    "code": "0001",  
+    "nom": "Karim",  
+    "prenom": "Guesmi",  
+    "equipe": "FC United",
+    "poste": "Mileu Défensif",
+    "ville": "La Marsa" 
+  },  
+  {  
+    "code": "0002",  
+    "nom": "Ali",  
+    "prenom": "Zitouni",  
+    "equipe": "Gammarth United",
+    "poste": "Attaquant",
+    "ville": "Gammarth" 
+  },  
+  {  
+    "code": "0003",  
+    "nom": "Nader",  
+    "prenom": "Ben Ammar",  
+    "equipe": "Club ITK",
+    "poste": "Gardien",
+    "ville": "La Goulette"   
+  },  
+  {  
+    "code": "0004",  
+    "nom": "Anis",  
+    "prenom": "Tahri",  
+    "equipe": "FC tifo",
+    "poste": "Défenceur",
+    "ville": "Ariana" 
+  },  
+  {  
+    "code": "0005",  
+    "nom": "Nidhal",  
+    "prenom": "Arfaoui",  
+    "equipe": "Poste FC",
+    "poste": "Arriere gauche",
+    "ville": "Menzah" 
+  },
+  {  
+    "code": "0006",  
+    "nom": "Hatem",  
+    "prenom": "Laarousi",  
+    "equipe": "Fitness Club FC",
+    "poste": "Mileur Défensif",
+    "ville": "Mnihla" 
+  } , 
+  {  
+    "code": "0007",  
+    "nom": "Zied",  
+    "prenom": "Ben Taher",  
+    "equipe": "King FC",
+    "poste": "Mileur Offensif",
+    "ville": "Manouba" 
+  } ,
+  {  
+    "code": "0008",  
+    "nom": "Makrem",  
+    "prenom": "Fehri",  
+    "equipe": "Gringos Unites",
+    "poste": "Mileu Droit",
+    "ville": "Bardo" 
+  },
+  {  
+    "code": "0009",  
+    "nom": "Semir",  
+    "prenom": "Samaras",  
+    "equipe": "Mexicano FC",
+    "poste": "Mileu Gauche",
+    "ville": "Kram" 
+  },
+  {  
+    "code": "0010",  
+    "nom": "Omar",  
+    "prenom": "Dhawedi",  
+    "equipe": "United Ariana",
+    "poste": "Arriere droit",
+    "ville": "Ariana" 
+  }  
+]  
