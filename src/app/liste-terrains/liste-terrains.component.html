@@ -7,7 +7,20 @@
         <th scope="col" *ngFor="let item of itemsTerrains">{{item}}</th>
       </tr>
     </thead>
-    <tbody> 
+    <tbody>
+        <!-- Remplissage dynamique de la liste des terrains a partir de la DB json-->
+        <tr *ngFor="let terrain of terrains">  
+            <td>{{ terrain.code}}</td>  
+            <td>{{ terrain.nom }}</td>  
+            <td>{{ terrain.responsable }}</td>  
+            <td>{{ terrain.telephone }}</td>  
+            <td>{{ terrain.cite }}</td>  
+            <td>{{ terrain.ville }}</td>  
+            <td><button type="button" class="btn btn-primary mb-2" routerLink="/carte-terrain">Consulter</button></td>   
+          </tr> 
+
+        <!--
+            -- Remplissage statique de tout les terrains
             <tr>
                 <td *ngFor="let terrain of terrain1">{{terrain}}</td>
                 <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
@@ -36,7 +49,7 @@
                 <td *ngFor="let terrain of terrain7">{{terrain}}</td>
                 <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
             </tr>
-
+        -->
     </tbody>
     
   </table>

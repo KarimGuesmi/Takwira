@@ -22,3 +22,46 @@ iframe{
     margin-top: 10px;
     width: 40%;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: rgb(148, 146, 146);
+
+}
+.carousel-item  p{
+    background-color: yellowgreen;
+    width: 650px;
+    margin-left: 16%;
+    opacity: 0.6;
+    color:black;
+}
+.carousel-item img{
+    height: 400px;
+}
+
+.body{
+    background-color: #eee;
+    
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.card-body h5{
+    text-align: center;
+}
+.card-footer{
+    text-align: center;
+}
+.card{
+    background-color: rgb(235, 232, 232);
+    border: 1px solid;
+}
+
+.card-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -3,6 +3,13 @@
     <table class="table table-striped">
 	  <thead>
 		<tr>
+			<!--Call item 's th from the typescript constructor -->
+			<th scope="col" *ngFor="let item of itemsTerrains">{{item}}</th>
+		</tr>
+		
+		<!--
+			-- Previous work with simple th writing columns
+		<tr>
 		  <th scope="col">Code Joueur</th>
 		  <th scope="col">Nom</th>
 		  <th scope="col">Prénom</th>
@@ -11,8 +18,25 @@
 		  <th scope="col">Ville</th>
 		  <th scope="col">Action</th>
 		</tr>
+		-->
 	  </thead>
+	  <!--Transformation dynamique tu tableau, importation des joueurs et ses données a partir de la db json-->
 	  <tbody>
+		<tr *ngFor="let joueur of joueurs">  
+            <td>{{ joueur.code}}</td>  
+            <td>{{ joueur.nom }}</td>  
+            <td>{{ joueur.prenom }}</td>  
+            <td>{{ joueur.equipe }}</td>  
+            <td>{{ joueur.poste }}</td>  
+            <td>{{ joueur.ville }}</td>  
+			<td>
+				<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
+				<button type="button" class="btn btn-secondary mb-2">Modifier</button> 
+				<button type="button" class="btn btn-danger mb-2">Supprimer</button>
+			</td>
+        </tr>  
+		<!--
+			-- remplissage statique du tableau, joueur par joueur
 		<tr>
 		  <td>0001</td> 
 		  <td>Guesmi</td>
@@ -23,7 +47,8 @@
 		  <td>
 			<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
 			<button type="button" class="btn btn-secondary mb-2">Modifier</button> 
-			<button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
+			<button type="button" class="btn btn-danger mb-2">Supprimer</button>
+		</td>
 		</tr>
 		<tr>
 		  <td>0002</td>
@@ -106,6 +131,7 @@
             <td>Ariana</td>
             <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
           </tr>
+		  -->
 	  </tbody>
 	</table>
 	

@@ -1,0 +1,58 @@
+[  
+  {  
+    "code": "101020",  
+    "nom": "Wembley Academy",  
+    "responsable": "Moneem",  
+    "telephone": "25698714",
+    "cite": "Bhar Lazreg",
+    "ville": "La Marsa" 
+  },  
+  {  
+    "code": "101021",  
+    "nom": "Mouihbi Academy",  
+    "responsable": "Akrem",  
+    "telephone": "24556669",
+    "cite": "Rolley",
+    "ville": "La Marsa" 
+  },  
+  {  
+    "code": "101022",  
+    "nom": "Ooredoo Academy",  
+    "responsable": "Nizar",  
+    "telephone": "95668771",
+    "cite": "Lac 1",
+    "ville": "La Marsa"  
+  },  
+  {  
+    "code": "101023",  
+    "nom": "San Siro Academy",  
+    "responsable": "Fares",  
+    "telephone": "21889660",
+    "cite": "Lac 1",
+    "ville": "La marsa"   
+  },  
+  {  
+    "code": "101024",  
+    "nom": "Golden Ball Academy",  
+    "responsable": "Mourad",  
+    "telephone": "23658761",
+    "cite": "Ain Zaghane",
+    "ville": "La marsa"    },
+  {  
+    "code": "101025",  
+    "nom": "Juventus Academy",  
+    "responsable": "Ahmed",  
+    "telephone": "20369852",
+    "cite": "Menzah 1",
+    "ville": "Ariana"  
+  } , 
+  {  
+    "code": "101026",  
+    "nom": "Soccer 6",  
+    "responsable": "Samir",  
+    "telephone": "29658741",
+    "cite": "Cité Hlel",
+    "ville": "Ariana"  
+  }
+  
+]  
