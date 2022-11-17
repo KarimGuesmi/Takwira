@@ -1,18 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import joueursData from '../joueurs.json';  
-//import * as Data from "./joueurs.json"
-//const data = require("module/path/joueurs.json");
+import { Observable } from 'rxjs';
+import { Product } from '../model/productmodel';
+import { ProductService } from '../services/products.service';
 
-
-
-interface Joueur {  
-  code: String;  
-  nom: String;  
-  prenom: String;  
-  equipe: String;  
-  poste: String;  
-  ville: String;  
-}  
 
 @Component({
   selector: 'app-test',
@@ -22,15 +12,25 @@ interface Joueur {
 
 
 export class TestComponent implements OnInit {
- 
-  name = 'Angular';  
-  joueurs: Joueur[] = joueursData;  
-
-  constructor() { }
+  // This declaration with the previous version
+  //products:Product[];
+  // NB: si on declare une variable Observable on lui met $ a la fin de la variable
+  products$:Observable<Product[]>;
+  
+  constructor(private productsService:ProductService) { }
 
 
   ngOnInit() {
    
+}
+onGetAllProducts(){
+  //Better version
+  this.products$=this.productsService.getAllProducts();
+
+  // Previous version 
+  /**this.productsService.getAllProducts().subscribe(data=>{
+    this.products=data;
+  })**/
 }
 
   

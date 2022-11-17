@@ -21,6 +21,7 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
 import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
 import { TestComponent } from './test/test.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     MatToolbarModule,
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,28 +1,22 @@
-<div class="container">  
-    
-    <h1 style="text-align: center;"> Affichage d'un tableau de joueurs </h1>  
-      
-    <table class="table table-striped">  
-      <thead>  
-          <tr>  
-            <th>code</th>  
-            <th>nom</th>  
-            <th>prenom</th>  
-            <th>equipe</th>  
-            <th>poste</th> 
-            <th>ville</th> 
-          </tr>  
-      </thead>  
-      <tbody>  
-        <tr *ngFor="let joueur of joueurs">  
-          <td>{{ joueur.code}}</td>  
-          <td>{{ joueur.nom }}</td>  
-          <td>{{ joueur.prenom }}</td>  
-          <td>{{ joueur.equipe }}</td>  
-          <td>{{ joueur.poste }}</td>  
-          <td>{{ joueur.ville }}</td>  
-        </tr>  
-      </tbody>  
-    </table>  
-  </div>  
-  
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button (click)="onGetAllProducts()" type="button" class="btn btn-primary">All</button>
+  <button type="button" class="btn btn-primary">Selected</button>
+  <button type="button" class="btn btn-primary">Available</button>
+</div>
+
+<div class="container" *ngIf="products$"> 
+<table class="table">
+  <tr>
+    <th>ID</th><th>name</th><th>price</th><th>quantity</th><th>selected</th><th>available</th>
+  </tr>
+  <tr *ngFor="let p of products$ |async">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.selected}}</td>
+    <td>{{p.available}}</td>
+
+  </tr>
+</table>
+</div>
