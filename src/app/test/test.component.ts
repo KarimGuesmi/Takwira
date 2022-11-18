@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Product } from '../model/productmodel';
-import { ProductService } from '../services/products.service';
+
+
+import { ApiService } from './api.service';
+import { Person } from './person';
 
 
 @Component({
@@ -12,25 +13,30 @@ import { ProductService } from '../services/products.service';
 
 
 export class TestComponent implements OnInit {
-  // This declaration with the previous version
-  //products:Product[];
-  // NB: si on declare une variable Observable on lui met $ a la fin de la variable
-  products$:Observable<Product[]>;
-  
-  constructor(private productsService:ProductService) { }
+ 
+  title = 'httpGet Example';
+  people:Person[];
+  person = new Person();
+  constructor(private apiService:ApiService) { }
 
 
   ngOnInit() {
-   
+    this.refreshPeople()
 }
-onGetAllProducts(){
-  //Better version
-  this.products$=this.productsService.getAllProducts();
+refreshPeople() {
+  this.apiService.getPeople()
+    .subscribe(data => {
+      console.log(data)
+      this.people=data;
+    })      
 
-  // Previous version 
-  /**this.productsService.getAllProducts().subscribe(data=>{
-    this.products=data;
-  })**/
+}
+addPerson() {
+  this.apiService.addPerson(this.person)
+    .subscribe(data => {
+      console.log(data)
+      this.refreshPeople();
+    })      
 }
 
   

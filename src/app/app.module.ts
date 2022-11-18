@@ -20,7 +20,7 @@ import { ProfilJoueurComponent } from './profil-joueur/profil-joueur.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
 import { TestComponent } from './test/test.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
@@ -49,7 +49,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

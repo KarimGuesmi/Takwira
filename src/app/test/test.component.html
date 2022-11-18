@@ -1,22 +1,26 @@
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button (click)="onGetAllProducts()" type="button" class="btn btn-primary">All</button>
-  <button type="button" class="btn btn-primary">Selected</button>
-  <button type="button" class="btn btn-primary">Available</button>
+<h1>{{title}}</h1>
+ 
+<div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="person.name" placeholder="inserer nom"/>
+  </div>
+  <div>
+    <button (click)="addPerson()">Add</button>
+  </div>
 </div>
-
-<div class="container" *ngIf="products$"> 
-<table class="table">
-  <tr>
-    <th>ID</th><th>name</th><th>price</th><th>quantity</th><th>selected</th><th>available</th>
-  </tr>
-  <tr *ngFor="let p of products$ |async">
-    <td>{{p.id}}</td>
-    <td>{{p.name}}</td>
-    <td>{{p.price}}</td>
-    <td>{{p.quantity}}</td>
-    <td>{{p.selected}}</td>
-    <td>{{p.available}}</td>
-
-  </tr>
+ 
+<table class='table'>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people;">
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+    </tr>
+  </tbody>
 </table>
-</div>

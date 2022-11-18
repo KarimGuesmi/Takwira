@@ -99,10 +99,6 @@ h1{
 	color: rgba(0, 0, 0, 0.2);
 }
 
-.booking-form .form-group:not(.input-not-empty) .form-control:not(:focus) {
-	color: transparent;
-}
-
 .booking-form select.form-control {
 	-webkit-appearance: none;
 	-moz-appearance: none;
