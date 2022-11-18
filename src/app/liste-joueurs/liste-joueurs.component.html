@@ -1,10 +1,18 @@
 <h1>Voici la liste des joueurs</h1>
-<br><br>
-    <table class="table table-striped">
+	<div class="buttonServer">
+	<div class="btn-group" role="group" aria-label="Basic example">
+		<button (click)="onGetAllPlayers()" type="button" class="btn btn-primary">All</button>
+		<button type="button" class="btn btn-primary">Selected</button>
+		<button type="button" class="btn btn-primary">Available</button>
+	</div>
+	</div>
+
+	
+    <table class="table table-striped" *ngIf="joueurs$">
 	  <thead>
 		<tr>
 			<!--Call item 's th from the typescript constructor -->
-			<th scope="col" *ngFor="let item of itemsTerrains">{{item}}</th>
+			<th scope="col" *ngFor="let item of itemsJoueurs">{{item}}</th>
 		</tr>
 		
 		<!--
@@ -22,7 +30,7 @@
 	  </thead>
 	  <!--Transformation dynamique tu tableau, importation des joueurs et ses données a partir de la db json-->
 	  <tbody>
-		<tr *ngFor="let joueur of joueurs">  
+		<tr *ngFor="let joueur of joueurs$ |async">  
             <td>{{ joueur.code}}</td>  
             <td>{{ joueur.nom }}</td>  
             <td>{{ joueur.prenom }}</td>  

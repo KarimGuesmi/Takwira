@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import joueursData from '../joueurs.json';  
+import { Observable } from 'rxjs';
+//import joueursData from '../joueurs.json';  
+import { Joueur } from '../model/joueurmodel';
+import { JoueurService } from '../services/joueurs.service';
 
-interface Joueur {  
+/*interface Joueur {  
   code: String;  
   nom: String;  
   prenom: String;  
   equipe: String;  
   poste: String;  
   ville: String;  
-}  
+} */ 
 
 @Component({
   selector: 'app-liste-joueurs',
@@ -16,17 +19,25 @@ interface Joueur {
   styleUrls: ['./liste-joueurs.component.css']
 })
 export class ListeJoueursComponent implements OnInit {
-  itemsTerrains : string[];
+  itemsJoueurs : string[];
 
-  name = 'Angular';  
-  joueurs: Joueur[] = joueursData;  
+  //name = 'Angular';  
+  //joueurs: Joueur[] = joueursData;  
 
-  constructor() { 
-    this.itemsTerrains = ["code Joueur","nom","Prénom","Equipe","Poste","Ville","Action"];
+  joueurs$:Observable<Joueur[]>;
+  
+  constructor(private joueursService: JoueurService) { 
+    this.itemsJoueurs = ["code Joueur","nom","Prénom","Equipe","Poste","Ville","Action"];
 
   }
 
+
   ngOnInit(): void {
+  }
+
+  onGetAllPlayers(){
+    //Better version
+    this.joueurs$=this.joueursService.getAllPlayers();
   }
 
 }

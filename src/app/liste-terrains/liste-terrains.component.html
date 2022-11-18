@@ -1,7 +1,16 @@
 <h1>Voici la liste des Terrains</h1>
-<br><br>
 
-<table class="table table-striped">
+
+<div class="buttonServer">
+	<div class="btn-group" role="group" aria-label="Basic example">
+		<button (click)="onGetAllStadiums()" type="button" class="btn btn-primary">All</button>
+		<button type="button" class="btn btn-primary">Selected</button>
+		<button type="button" class="btn btn-primary">Available</button>
+	</div>
+	</div>
+
+
+<table class="table table-striped" *ngIf="terrains$">
     <thead>
       <tr>
         <th scope="col" *ngFor="let item of itemsTerrains">{{item}}</th>
@@ -9,7 +18,7 @@
     </thead>
     <tbody>
         <!-- Remplissage dynamique de la liste des terrains a partir de la DB json-->
-        <tr *ngFor="let terrain of terrains">  
+        <tr *ngFor="let terrain of terrains$ |async">  
             <td>{{ terrain.code}}</td>  
             <td>{{ terrain.nom }}</td>  
             <td>{{ terrain.responsable }}</td>  

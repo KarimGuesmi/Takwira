@@ -12,3 +12,10 @@ th{
     color: white;
     background-color: rgb(122, 121, 196);
 }
+
+.buttonServer{
+    margin-left: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
