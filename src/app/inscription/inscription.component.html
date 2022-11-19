@@ -29,14 +29,13 @@
 			  ">
 			<div class="card-body p-5 shadow-5 text-center">
 			  <h3 class="fw-bold mb-5">Veuillez saisir vos coordonnées</h3>
-			  
-			 
 			 
 			  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 			  
 			   <!-- 2 colonnes layout pour l'identifiant et nom de l'équipe -->
 			   <div class="row">
 				<!-- Identifiant checking -->
+				<!--
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
 					  <input type="text" id="inputID" class="form-control" formControlName="identifiant" 
@@ -47,15 +46,15 @@
 						</div>
 					</div>
 				  </div>
-
+				-->
 				<!-- Nom equipe checking -->
 				  <div class="col-md-6 mb-4">
 					<div class="form-outline">
 					  <input type="text" id="inputTeamName" class="form-control" 
-					  formControlName="nomequipe"  placeholder="Nom de l'équipe"
-					  [ngClass]="{ 'is-invalid': submitted && f['nomequipe'].errors }"/>
-						<div *ngIf="submitted && f['nomequipe'].errors" class="invalid-feedback">
-							<div *ngIf="f['nomequipe'].errors['required']">Nom équipe est nécessaire</div>
+					  formControlName="equipe"  placeholder="Nom de l'équipe"
+					  [ngClass]="{ 'is-invalid': submitted && f['equipe'].errors }"/>
+						<div *ngIf="submitted && f['equipe'].errors" class="invalid-feedback">
+							<div *ngIf="f['equipe'].errors['required']">Nom équipe est nécessaire</div>
 						</div>
 					</div>
 				  </div>
@@ -120,11 +119,11 @@
 					  <div class="col-md-6 mb-4">
 						<div class="form-outline">
 						  <input type="text" (keypress)="keyPress($event)" id="inputPhone" class="form-control" 
-						  placeholder="Numéro téléphone" formControlName="phone" 
-						  [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }"/>
-							<div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
-								<div *ngIf="f['phone'].errors['required']">Numéro téléphone est nécessaire</div>
-							<div *ngIf="f['phone'].errors['pattern'] || f['phone'].errors['maxlength'] || f['phone'].errors['minlength']">
+						  placeholder="Numéro téléphone" formControlName="telephone" 
+						  [ngClass]="{ 'is-invalid': submitted && f['telephone'].errors }"/>
+							<div *ngIf="submitted && f['telephone'].errors" class="invalid-feedback">
+								<div *ngIf="f['telephone'].errors['required']">Numéro téléphone est nécessaire</div>
+							<div *ngIf="f['telephone'].errors['pattern'] || f['telephone'].errors['maxlength'] || f['telephone'].errors['minlength']">
 								Le numéro de téléphone doit être composé de 8 chiffres 
 							</div>							
 							

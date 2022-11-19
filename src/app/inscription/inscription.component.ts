@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { JoueurService } from '../services/joueurs.service';
 
 @Component({
   selector: 'app-inscription',
@@ -10,8 +12,12 @@ export class InscriptionComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
+  //
+  //joueurFormGroup?:FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private joueursService:JoueurService) { }
+
+
 
   //only number will be add
   keyPress(event: any) {
@@ -24,8 +30,8 @@ export class InscriptionComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      identifiant: ['', Validators.required],
-      nomequipe: ['', Validators.required],
+      
+      equipe: ['', Validators.required],
       nom: ['', Validators.required],
       prenom: ['', Validators.required],
       poste: ['', Validators.required],
@@ -34,7 +40,7 @@ export class InscriptionComponent implements OnInit {
         Validators.pattern("^[0-9]*$"),
         Validators.minLength(4), Validators.maxLength(5)]], 
       ville: ['', Validators.required],
-      phone: ['', [ Validators.required,
+      telephone: ['', [ Validators.required,
         Validators.pattern("^[0-9]*$"),
         Validators.minLength(8), Validators.maxLength(8)]],
       cite: ['', Validators.required],
@@ -48,16 +54,20 @@ export class InscriptionComponent implements OnInit {
   });
   }
 
+
   // convenience getter for easy access to form fields
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-  
     // stop here if form is invalid
     if (this.registerForm.invalid) {
         return;
     }
+    this.joueursService.save(this.registerForm?.value).subscribe(data=>{
+      alert('sucess saving joueur');
+    });
+
   
     // Afficher les valeurs de remplissage après succés
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));

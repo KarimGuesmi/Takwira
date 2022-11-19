@@ -1,8 +1,14 @@
 export interface Joueur {
-    code : string;
+    id : number;
+    equipe : string;
     nom : string;
     prenom : string;
-    equipe : string;
-    poste : string;
+    poste:string;
+    age:number;
+    telephone:number;
+    cite:string;
+    code:number;
     ville : string;
+    email:string;
+    password:string;
 }

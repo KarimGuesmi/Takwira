@@ -43,84 +43,93 @@
   ],
   "joueurs": [
     {
-      "code": "0001",
+      "id": 1,
+      "equipe": "FC United",
       "nom": "Karim",
       "prenom": "Guesmi",
-      "equipe": "FC United",
       "poste": "Mileu Défensif",
-      "ville": "La Marsa"
+      "age": 32,
+      "telephone": 22558996,
+      "cite": "Manouba",
+      "code": 2085,
+      "ville": "La Marsa",
+      "email": "karim@gmail.fr",
+      "password": "kar1023"
     },
     {
-      "code": "0002",
-      "nom": "Ali",
-      "prenom": "Zitouni",
-      "equipe": "Gammarth United",
-      "poste": "Attaquant",
-      "ville": "Gammarth"
+      "id": 2,
+      "equipe": "FC United",
+      "nom": "mourad",
+      "prenom": "tahri",
+      "poste": "Mileu Défensif",
+      "age": 32,
+      "telephone": 22558996,
+      "cite": "Manouba",
+      "code": 2085,
+      "ville": "La Marsa",
+      "email": "karim@gmail.fr",
+      "password": "kar1023"
     },
     {
-      "code": "0003",
-      "nom": "Nader",
-      "prenom": "Ben Ammar",
-      "equipe": "Club ITK",
+      "id": 3,
+      "equipe": "FC United",
+      "nom": "Ahmed",
+      "prenom": "Ben Yahia",
+      "poste": "Mileu Défensif",
+      "age": 32,
+      "telephone": 22558996,
+      "cite": "Manouba",
+      "code": 2085,
+      "ville": "La Marsa",
+      "email": "karim@gmail.fr",
+      "password": "kar1023"
+    },
+    {
+      "id": 4,
+      "equipe": "Taraji",
+      "nom": "Mlik",
+      "prenom": "Ahmed",
       "poste": "Gardien",
-      "ville": "La Goulette"
+      "age": 25,
+      "code": 8987,
+      "ville": "La Marsa",
+      "telephone": 58965412,
+      "cite": "Khaoui",
+      "email": "ahmed@gmail.de",
+      "password": "123456",
+      "confirmPassword": "123456"
     },
     {
-      "code": "0004",
-      "nom": "Anis",
-      "prenom": "Tahri",
-      "equipe": "FC tifo",
-      "poste": "Défenceur",
-      "ville": "Ariana"
+      "equipe": "Ariana United",
+      "nom": "Aziz",
+      "prenom": "Srasra",
+      "poste": "Milieur",
+      "age": 12,
+      "code": "1236",
+      "ville": "Ariana",
+      "telephone": "45699874",
+      "cite": "GHazela",
+      "email": "aziz@yahoo.com",
+      "password": "000000",
+      "confirmPassword": "000000",
+      "acceptTerms": true,
+      "id": 5
     },
     {
-      "code": "0005",
-      "nom": "Nidhal",
-      "prenom": "Arfaoui",
-      "equipe": "Poste FC",
-      "poste": "Arriere gauche",
-      "ville": "Menzah"
-    },
-    {
-      "code": "0006",
-      "nom": "Hatem",
-      "prenom": "Laarousi",
-      "equipe": "Fitness Club FC",
-      "poste": "Mileur Défensif",
-      "ville": "Mnihla"
-    },
-    {
-      "code": "0007",
-      "nom": "Zied",
-      "prenom": "Ben Taher",
-      "equipe": "King FC",
-      "poste": "Mileur Offensif",
-      "ville": "Manouba"
-    },
-    {
-      "code": "0008",
-      "nom": "Makrem",
-      "prenom": "Fehri",
-      "equipe": "Gringos Unites",
-      "poste": "Mileu Droit",
-      "ville": "Bardo"
-    },
-    {
-      "code": "0009",
-      "nom": "Semir",
-      "prenom": "Samaras",
-      "equipe": "Mexicano FC",
-      "poste": "Mileu Gauche",
-      "ville": "Kram"
-    },
-    {
-      "code": "0010",
-      "nom": "Omar",
-      "prenom": "Dhawedi",
-      "equipe": "United Ariana",
-      "poste": "Arriere droit",
-      "ville": "Ariana"
+      "equipe": "United TBK",
+      "nom": "Ben Naceur",
+      "prenom": "Fares",
+      "poste": "Attaquant",
+      "age": 32,
+      "code": "2070",
+      "ville": "La Marsa",
+      "telephone": "89741520",
+      "cite": "Gammarth",
+      "email": "fares@yahoo.com",
+      "password": "fares1",
+      "confirmPassword": "fares1",
+      "acceptTerms": true,
+      "id": 6
     }
   ],
   "terrains": [
@@ -235,6 +244,10 @@
     {
       "name": "karim Guesmi",
       "id": 3
+    },
+    {
+      "name": "ahmed ben taher",
+      "id": 4
     }
   ]
 }

@@ -1,0 +1,130 @@
+<h1>Espace Tournois</h1>
+
+<div style="display: flex;">
+    <div style="width: 15%;">
+        <app-sidenavbar></app-sidenavbar>
+    </div>
+
+    <div style="width: 90%; margin-left: 5px; background-color: rgb(235, 226, 226);">
+        <div class="full">
+            <div class="line1">
+                <h3><u>Gestionnaire des matches</u></h3>
+            </div>
+            <div class="line2">
+                <div class="box1"><h5>Ajouter un match</h5>
+                    <form action="/action_page.php">
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Equipe 1</option>
+                              <option value="1">United Team</option>
+                              <option value="2">Ariana FC</option>
+                              <option value="3">Gammarth Club</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Equipe 2</option>
+                              <option value="1">United Team</option>
+                              <option value="2">Ariana FC</option>
+                              <option value="3">Gammarth Club</option>
+                            </select>
+                          </div>
+                        <div  class="mb-3">
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Heure</option>
+                              <option value="1">09-10</option>
+                              <option value="2">10-11</option>
+                              <option value="3">11-12</option>
+                              <option value="3">12-13</option>
+                              <option value="3">13-14</option>
+                              <option value="3">14-15</option>
+                              <option value="3">15-16</option>
+                              <option value="3">16-17</option>
+                              <option value="3">17-18</option>
+                              <option value="3">18-19</option>
+                              <option value="3">19-20</option>
+                              <option value="3">20-21</option>
+                              <option value="3">21-22</option>
+                              <option value="3">22-23</option>
+                              <option value="3">23-00</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Terrain</option>
+                              <option value="1">Wembley</option>
+                              <option value="2">Gammarth</option>
+                              <option value="3">Mouihbi Club</option>
+                              <option value="3">Golden Ball</option>
+                              <option value="3">Sukra Club</option>
+                              <option value="3">Mannouba</option>
+                              <option value="3">Ariana</option>
+                              <option value="3">Juventus</option>
+                            </select>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                      </form>
+                </div>
+
+                <!--Ajouter un résultat-->
+                <div class="box2"><h5>Ajouter un résultat</h5>
+                    <div class="input-group mb-3">
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Equipe 1</option>
+                          <option value="1">United Team</option>
+                          <option value="2">Ariana FC</option>
+                          <option value="3">Gammarth Club</option>
+                        </select>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                      </div>
+                      <div class="input-group mb-3" style="margin-top: 21%;">
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Equipe 2</option>
+                          <option value="1">United Team</option>
+                          <option value="2">Ariana FC</option>
+                          <option value="3">Gammarth Club</option>
+                        </select>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Ajouter</button>
+                </div>
+
+                <!--Ajouter Un butteur-->
+                <div class="box3"><h5>Ajouter un butteur</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nom du Joueur">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Prénom du Joueur">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="margin-top: 10%;">Ajouter</button>
+                </div>
+                
+                <!--Ajouter un passeur-->
+                <div class="box4"><h5>Ajouter un passeur</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nom du passeur">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Prénom du passeur">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de passes">
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="margin-top: 10%;">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

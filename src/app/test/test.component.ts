@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-
-import { ApiService } from './api.service';
-import { Person } from './person';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { JoueurService } from '../services/joueurs.service';
 
 
 @Component({
@@ -14,31 +13,27 @@ import { Person } from './person';
 
 export class TestComponent implements OnInit {
  
-  title = 'httpGet Example';
-  people:Person[];
-  person = new Person();
-  constructor(private apiService:ApiService) { }
+  joueurFormGroup?:FormGroup;
+
+  constructor(private fb:FormBuilder, private joueursService:JoueurService) { }
 
 
   ngOnInit() {
-    this.refreshPeople()
-}
-refreshPeople() {
-  this.apiService.getPeople()
-    .subscribe(data => {
-      console.log(data)
-      this.people=data;
-    })      
-
-}
-addPerson() {
-  this.apiService.addPerson(this.person)
-    .subscribe(data => {
-      console.log(data)
-      this.refreshPeople();
-    })      
+      this.joueurFormGroup=this.fb.group({
+      id:["",Validators.required],  
+      nom:["",Validators.required],
+      prenom:["",Validators.required],
+      equipe:["",Validators.required],
+      poste:["",Validators.required],
+      ville:["",Validators.required],
+    });
 }
 
+onSaveJoueur(){
+  this.joueursService.save(this.joueurFormGroup?.value).subscribe(data=>{
+    alert('sucess saving joueur');
+  });
+}
   
 }
 

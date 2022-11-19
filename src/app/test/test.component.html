@@ -1,26 +1,36 @@
-<h1>{{title}}</h1>
- 
-<div>
-  <div>
-    <label>Name: </label>
-    <input [(ngModel)]="person.name" placeholder="inserer nom"/>
-  </div>
-  <div>
-    <button (click)="addPerson()">Add</button>
-  </div>
+<div class="container" *ngIf="joueurFormGroup">
+  
+  <form [formGroup]="joueurFormGroup">
+     
+    <div class="form-group">
+      <label>ID</label>
+    </div>
+
+      <div class="form-group">
+        <label>nom</label>
+        <input type="text" class="form-control" formControlName="nom">
+      </div>
+
+      <div class="form-group">
+        <label>prenom</label>
+        <input type="text" class="form-control" formControlName="prenom">
+      </div>
+
+      <div class="form-group">
+        <label>equipe</label>
+        <input type="text" class="form-control" formControlName="equipe">
+      </div>
+
+      <div class="form-group">
+        <label>poste</label>
+        <input type="text" class="form-control" formControlName="poste">
+      </div>
+
+      <div class="form-group">
+        <label>ville</label>
+        <input type="text" class="form-control"formControlName="ville">
+      </div>
+
+      <button class="btn btn-success" (click)="onSaveJoueur()">Ajouter Joueur</button>
+  </form>
 </div>
- 
-<table class='table'>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let person of people;">
-      <td>{{person.id}}</td>
-      <td>{{person.name}}</td>
-    </tr>
-  </tbody>
-</table>

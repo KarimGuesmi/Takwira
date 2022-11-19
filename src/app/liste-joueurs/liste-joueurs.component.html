@@ -2,8 +2,6 @@
 	<div class="buttonServer">
 	<div class="btn-group" role="group" aria-label="Basic example">
 		<button (click)="onGetAllPlayers()" type="button" class="btn btn-primary">All</button>
-		<button type="button" class="btn btn-primary">Selected</button>
-		<button type="button" class="btn btn-primary">Available</button>
 	</div>
 	</div>
 
@@ -31,12 +29,18 @@
 	  <!--Transformation dynamique tu tableau, importation des joueurs et ses données a partir de la db json-->
 	  <tbody>
 		<tr *ngFor="let joueur of joueurs$ |async">  
-            <td>{{ joueur.code}}</td>  
+            <td>{{ joueur.id}}</td>  
+			<td>{{ joueur.equipe }}</td>  
             <td>{{ joueur.nom }}</td>  
             <td>{{ joueur.prenom }}</td>  
-            <td>{{ joueur.equipe }}</td>  
             <td>{{ joueur.poste }}</td>  
+			<td>{{ joueur.age }}</td>  
+			<td>{{ joueur.telephone }}</td>  
+			<td>{{ joueur.cite }}</td>  
+			<td>{{ joueur.code }}</td>  
             <td>{{ joueur.ville }}</td>  
+			<td>{{ joueur.email }}</td>  
+			<td>{{ joueur.password }} </td>
 			<td>
 				<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
 				<button type="button" class="btn btn-secondary mb-2">Modifier</button> 

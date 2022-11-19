@@ -27,7 +27,7 @@ export class ListeJoueursComponent implements OnInit {
   joueurs$:Observable<Joueur[]>;
   
   constructor(private joueursService: JoueurService) { 
-    this.itemsJoueurs = ["code Joueur","nom","Prénom","Equipe","Poste","Ville","Action"];
+    this.itemsJoueurs = ["id","Equipe","nom","Prénom","Poste","age","telephone","cite","code","Ville","email","password","Action"];
 
   }
 

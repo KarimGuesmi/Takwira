@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Person } from './person';
+
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Joueur } from './joueur';
  
 @Injectable({providedIn:'root'})
 export class ApiService {
@@ -11,16 +12,17 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
  
-  getPeople(): Observable<Person[]> {
-    console.log('getPeople '+this.baseURL + 'people')
-    return this.http.get<Person[]>(this.baseURL + 'people')
+  getJoueur(): Observable<Joueur[]> {
+    console.log('getJoueur'+this.baseURL + 'joueurs')
+    return this.http.get<Joueur[]>(this.baseURL + 'joueurs')
   }
- 
-  addPerson(person:Person): Observable<any> {
+
+  //IS ADDED
+  addJoueur(joueur:Joueur): Observable<any> {
     const headers = { 'content-type': 'application/json'}  
-    const body=JSON.stringify(person);
+    const body=JSON.stringify(joueur);
     console.log(body)
-    return this.http.post(this.baseURL + 'people', body,{'headers':headers})
+    return this.http.post(this.baseURL + 'joueurs', body,{'headers':headers})
   }
  
 }

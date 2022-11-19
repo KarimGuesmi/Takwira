@@ -22,6 +22,15 @@ import { ReglementInterieurComponent } from './reglement-interieur/reglement-int
 import { TestComponent } from './test/test.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AproposComponent } from './apropos/apropos.component';
+import { NousContacterComponent } from './nous-contacter/nous-contacter.component';
+import { SidenavbarComponent } from './sidenavbar/sidenavbar.component';
+import { ResultatsComponent } from './resultats/resultats.component';
+import { ClassementComponent } from './classement/classement.component';
+import { MeilleursButteursComponent } from './meilleurs-butteurs/meilleurs-butteurs.component';
+import { MeilleursPasseursComponent } from './meilleurs-passeurs/meilleurs-passeurs.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 
 
 @NgModule({
@@ -41,7 +50,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ProfilJoueurComponent,
     TermsAndConditionsComponent,
     ReglementInterieurComponent,
-    TestComponent
+    TestComponent,
+    AproposComponent,
+    NousContacterComponent,
+    SidenavbarComponent,
+    ResultatsComponent,
+    ClassementComponent,
+    MeilleursButteursComponent,
+    MeilleursPasseursComponent,
+    CalendrierComponent,
+    GestionMatchesComponent
   ],
   imports: [
     BrowserModule,

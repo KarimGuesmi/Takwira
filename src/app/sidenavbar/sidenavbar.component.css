@@ -1,0 +1,12 @@
+.sidebar .nav-link {
+    
+    height: 80px;
+    font-weight: 500;
+    color: --bs-dark;
+    background-color: rgb(224, 207, 58);
+    text-align: end;
+}
+.sidebar .nav-link:hover {
+    background: var(--bs-light);
+    color: var(--bs-primary);
+}

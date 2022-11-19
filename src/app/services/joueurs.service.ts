@@ -18,4 +18,10 @@ export class JoueurService{
         return this.http.get<Joueur[]>(host+"/joueurs");
     
     }
+
+    // added
+   save(joueur:Joueur):Observable<Joueur>{
+    let host = environment.host;
+    return this.http.post<Joueur>(host+"/joueurs", joueur);
+   }
 }

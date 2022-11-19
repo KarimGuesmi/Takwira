@@ -13,6 +13,15 @@ import { ProfilJoueurComponent } from './profil-joueur/profil-joueur.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { ReglementInterieurComponent } from './reglement-interieur/reglement-interieur.component';
 import { TestComponent } from './test/test.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { NousContacterComponent } from './nous-contacter/nous-contacter.component';
+import { ResultatsComponent } from './resultats/resultats.component';
+
+import { ClassementComponent } from './classement/classement.component';
+import { MeilleursButteursComponent } from './meilleurs-butteurs/meilleurs-butteurs.component';
+import { MeilleursPasseursComponent } from './meilleurs-passeurs/meilleurs-passeurs.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 
 const routes: Routes = [
 
@@ -28,6 +37,14 @@ const routes: Routes = [
   {path : "profil-joueur", component : ProfilJoueurComponent},
   {path : "terms-and-conditions", component : TermsAndConditionsComponent},
   {path : "reglement-interieur", component : ReglementInterieurComponent},
+  {path : "nous-contacter", component : NousContacterComponent},
+  {path : "apropos", component : AproposComponent},
+  {path : "resultats", component : ResultatsComponent},
+  {path : "classement", component : ClassementComponent},
+  {path : "meilleurs-butteurs", component : MeilleursButteursComponent},
+  {path : "meilleurs-passeurs", component : MeilleursPasseursComponent},
+  {path : "calendrier", component : CalendrierComponent},
+  {path : "gestion-matches", component : GestionMatchesComponent},
   {path : "test", component : TestComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];

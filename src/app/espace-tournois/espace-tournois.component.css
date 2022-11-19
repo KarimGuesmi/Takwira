@@ -4,3 +4,11 @@ h1{
     background:  rgb(122, 121, 196);
     color: white;
 }
+
+.body{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+p{
+    margin-top: 10px;
+}
