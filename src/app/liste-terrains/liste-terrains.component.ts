@@ -55,6 +55,7 @@ export class ListeTerrainsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.terrains$=this.terrainsService.getAllStadiums();
   }
   onGetAllStadiums(){
     //Better version

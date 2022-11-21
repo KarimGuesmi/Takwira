@@ -43,7 +43,6 @@
   ],
   "joueurs": [
     {
-      "id": 1,
       "equipe": "FC United",
       "nom": "Karim",
       "prenom": "Guesmi",
@@ -54,13 +53,13 @@
       "code": 2085,
       "ville": "La Marsa",
       "email": "karim@gmail.fr",
-      "password": "kar1023"
+      "password": "kar1023",
+      "id": 1
     },
     {
-      "id": 2,
       "equipe": "FC United",
-      "nom": "mourad",
-      "prenom": "tahri",
+      "nom": "Tahri",
+      "prenom": "Mourad",
       "poste": "Mileu Défensif",
       "age": 32,
       "telephone": 22558996,
@@ -68,13 +67,13 @@
       "code": 2085,
       "ville": "La Marsa",
       "email": "karim@gmail.fr",
-      "password": "kar1023"
+      "password": "kar1023",
+      "id": 2
     },
     {
-      "id": 3,
       "equipe": "FC United",
-      "nom": "Ahmed",
-      "prenom": "Ben Yahia",
+      "nom": "Ben Yahia",
+      "prenom": "Ahmed",
       "poste": "Mileu Défensif",
       "age": 32,
       "telephone": 22558996,
@@ -82,7 +81,8 @@
       "code": 2085,
       "ville": "La Marsa",
       "email": "karim@gmail.fr",
-      "password": "kar1023"
+      "password": "kar1023",
+      "id": 3
     },
     {
       "id": 4,
@@ -98,38 +98,6 @@
       "email": "ahmed@gmail.de",
       "password": "123456",
       "confirmPassword": "123456"
-    },
-    {
-      "equipe": "Ariana United",
-      "nom": "Aziz",
-      "prenom": "Srasra",
-      "poste": "Milieur",
-      "age": 12,
-      "code": "1236",
-      "ville": "Ariana",
-      "telephone": "45699874",
-      "cite": "GHazela",
-      "email": "aziz@yahoo.com",
-      "password": "000000",
-      "confirmPassword": "000000",
-      "acceptTerms": true,
-      "id": 5
-    },
-    {
-      "equipe": "United TBK",
-      "nom": "Ben Naceur",
-      "prenom": "Fares",
-      "poste": "Attaquant",
-      "age": 32,
-      "code": "2070",
-      "ville": "La Marsa",
-      "telephone": "89741520",
-      "cite": "Gammarth",
-      "email": "fares@yahoo.com",
-      "password": "fares1",
-      "confirmPassword": "fares1",
-      "acceptTerms": true,
-      "id": 6
     }
   ],
   "terrains": [
@@ -230,24 +198,6 @@
       "phone": "55987123",
       "date": "13/11/2022",
       "horaire": "20-21"
-    }
-  ],
-  "people": [
-    {
-      "id": 1,
-      "name": "Don Bradman"
-    },
-    {
-      "id": 2,
-      "name": "Sachin Tendulkar"
-    },
-    {
-      "name": "karim Guesmi",
-      "id": 3
-    },
-    {
-      "name": "ahmed ben taher",
-      "id": 4
     }
   ]
 }

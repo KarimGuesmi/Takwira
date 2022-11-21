@@ -1,10 +1,11 @@
 <h1>Voici la liste des joueurs</h1>
+<!-- I Dont't need this. I prefer that this page is loaged once i click on the list-joueur navbar button option
 	<div class="buttonServer">
 	<div class="btn-group" role="group" aria-label="Basic example">
 		<button (click)="onGetAllPlayers()" type="button" class="btn btn-primary">All</button>
 	</div>
 	</div>
-
+-->
 	
     <table class="table table-striped" *ngIf="joueurs$">
 	  <thead>
@@ -43,108 +44,9 @@
 			<td>{{ joueur.password }} </td>
 			<td>
 				<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
-				<button type="button" class="btn btn-secondary mb-2">Modifier</button> 
-				<button type="button" class="btn btn-danger mb-2">Supprimer</button>
+				<button type="button" class="btn btn-secondary mb-2" (click)="onSubmitUpdate(joueur.id)">Modifier</button> 
+				<button type="button" class="btn btn-danger mb-2" (click)="onDelete(joueur.id)">Supprimer</button>
 			</td>
         </tr>  
-		<!--
-			-- remplissage statique du tableau, joueur par joueur
-		<tr>
-		  <td>0001</td> 
-		  <td>Guesmi</td>
-		  <td>Karim</td>
-		  <td>FC United</td>
-		  <td>Milieur Offensif</td>
-		  <td>La marsa</td>
-		  <td>
-			<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
-			<button type="button" class="btn btn-secondary mb-2">Modifier</button> 
-			<button type="button" class="btn btn-danger mb-2">Supprimer</button>
-		</td>
-		</tr>
-		<tr>
-		  <td>0002</td>
-		  <td>Ali</td>
-		  <td>Zitouni</td>
-		  <td>Gammarth United</td>
-		  <td>Attaquant</td>
-		  <td>Gammarth</td>
-		  <td><button type="button" class="btn btn-primary mb-2"> Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-		<tr>
-		  <td>0003</td>
-		  <td>Nader</td>
-		  <td>Ben Ammar</td>
-		  <td>Club ITK</td>
-		  <td>Gardien</td>
-		  <td>La Goulette</td>
-		  <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-		<tr>
-		  <td>0004</td>
-		  <td>Anis</td>
-		  <td>Tahri</td>
-		  <td>FC tifo</td>
-		  <td>Défenceur</td>
-		  <td>Ariana</td>
-		  <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-		<tr>
-		  <td>0005</td>
-		  <td>Nidhal</td>
-		  <td>Arfaoui</td>
-		  <td>Poste FC</td>
-		  <td>Arriere gauche</td>
-		  <td>Menzah</td>
-		  <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-		<tr>
-		  <td>0006</td>
-		  <td>Hatem</td>
-		  <td>Laarousi</td>
-		  <td>Fitness Club FC</td>
-		  <td>Mileur Défensif</td>
-		  <td>Mnihla</td>
-		  <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-		<tr>
-		  <td>0007</td>
-		  <td>Zied</td>
-		  <td>Ben Taher</td>
-		  <td>King FC</td>
-		  <td>Mileur Offensif</td>
-		  <td>Manouba</td>
-		  <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-		</tr>
-        <tr>
-            <td>0008</td>
-            <td>Makrem</td>
-            <td>Fehri</td>
-            <td>Gringos Unites</td>
-            <td>Mileu Droit</td>
-            <td>Bardo</td>
-            <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-          </tr>
-          <tr>
-            <td>0009</td>
-            <td>Semir</td>
-            <td>Samaras</td>
-            <td>Mexicano FC</td>
-            <td>Mileu Gauche</td>
-            <td>Kram</td>
-            <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-          </tr>
-          <tr>
-            <td>0010</td>
-            <td>Omar</td>
-            <td>Dhawedi</td>
-            <td>United Ariana</td>
-            <td>Arriere droit</td>
-            <td>Ariana</td>
-            <td><button type="button" class="btn btn-primary mb-2">Voir </button> <button type="button" class="btn btn-secondary mb-2"> Modifier</button> <button type="button" class="btn btn-danger mb-2">Supprimer</button></td>
-          </tr>
-		  -->
 	  </tbody>
 	</table>
-	
-	

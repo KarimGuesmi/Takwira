@@ -31,6 +31,7 @@ import { MeilleursButteursComponent } from './meilleurs-butteurs/meilleurs-butte
 import { MeilleursPasseursComponent } from './meilleurs-passeurs/meilleurs-passeurs.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
+import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { GestionMatchesComponent } from './gestion-matches/gestion-matches.compo
     MeilleursButteursComponent,
     MeilleursPasseursComponent,
     CalendrierComponent,
-    GestionMatchesComponent
+    GestionMatchesComponent,
+    UpdatejoueurComponent
   ],
   imports: [
     BrowserModule,

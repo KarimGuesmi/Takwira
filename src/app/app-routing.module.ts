@@ -23,6 +23,8 @@ import { MeilleursPasseursComponent } from './meilleurs-passeurs/meilleurs-passe
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 
+import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
+
 const routes: Routes = [
 
   {path : "home", component : HomeComponent},
@@ -46,6 +48,7 @@ const routes: Routes = [
   {path : "calendrier", component : CalendrierComponent},
   {path : "gestion-matches", component : GestionMatchesComponent},
   {path : "test", component : TestComponent},
+  {path : "updatejoueur/:id", component : UpdatejoueurComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];
 
