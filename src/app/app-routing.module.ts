@@ -36,7 +36,7 @@ const routes: Routes = [
   {path : "inscription", component : InscriptionComponent},
   {path : "connexion", component : ConnexionComponent},
   {path : "carte-terrain", component : CarteTerrainComponent},
-  {path : "profil-joueur", component : ProfilJoueurComponent},
+  {path : "profil-joueur/:id", component : ProfilJoueurComponent},
   {path : "terms-and-conditions", component : TermsAndConditionsComponent},
   {path : "reglement-interieur", component : ReglementInterieurComponent},
   {path : "nous-contacter", component : NousContacterComponent},
@@ -47,7 +47,7 @@ const routes: Routes = [
   {path : "meilleurs-passeurs", component : MeilleursPasseursComponent},
   {path : "calendrier", component : CalendrierComponent},
   {path : "gestion-matches", component : GestionMatchesComponent},
-  {path : "test", component : TestComponent},
+  {path : "test/:id", component : TestComponent},
   {path : "updatejoueur/:id", component : UpdatejoueurComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];

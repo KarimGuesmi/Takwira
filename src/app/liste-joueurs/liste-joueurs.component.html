@@ -43,10 +43,14 @@
 			<td>{{ joueur.email }}</td>  
 			<td>{{ joueur.password }} </td>
 			<td>
-				<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur">Voir</button> 
+				<button type="button" class="btn btn-primary mb-2" routerLink="/profil-joueur/{{joueur.id}}">Profil</button> 
 				<button type="button" class="btn btn-secondary mb-2" (click)="onSubmitUpdate(joueur.id)">Modifier</button> 
 				<button type="button" class="btn btn-danger mb-2" (click)="onDelete(joueur.id)">Supprimer</button>
 			</td>
         </tr>  
 	  </tbody>
 	</table>
+<!--
+
+	routerLink="/profil-joueur"
+-->

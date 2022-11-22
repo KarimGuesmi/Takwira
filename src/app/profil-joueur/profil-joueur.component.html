@@ -10,11 +10,10 @@
           style="width: 250px; z-index: 1">					  
         </div>
         <div class="ms-3" style="margin-top: 150px;">
-          <h5>Karim Guesmi</h5>
-          <p>FC United, La Marsa</p>
+          <h5>{{joueurData.prenom}} {{joueurData.nom}}</h5>
+          <p>{{joueurData.equipe}}, {{joueurData.ville}}</p>
         </div>
         </div>
-        
         
         
         <div class="p-4 text-black" style="background-color: #f8f9fa;">
@@ -52,12 +51,12 @@
           <h2>A propos</h2>
           
           <div class="p-4" style="background-color: #f8f9fa; ">
-            <p class="font-italic mb-1"><b><u>Code:</u></b> 0001</p>
-            <p class="font-italic mb-1"><b><u>Age:</u></b> 32 Ans</p>
-            <p class="font-italic mb-1"><b><u>Contact:</u></b> 25 677 116</p>
-            <p class="font-italic mb-1"><b><u>Adresse:</u></b> Khalil, la Marsa, Tunis</p>
-            <p class="font-italic mb-1"><b><u>Equipe:</u></b> Fc United, La Marsa </p>
-            <p class="font-italic mb-1"><b><u>Poste:</u></b> Milieu Défensif </p>
+            <p class="font-italic mb-1"><b><u>Code:</u></b> {{joueurData.id}}</p>
+            <p class="font-italic mb-1"><b><u>Age:</u></b> {{joueurData.age}} Ans</p>
+            <p class="font-italic mb-1"><b><u>Contact:</u></b> {{joueurData.telephone}}</p>
+            <p class="font-italic mb-1"><b><u>Adresse:</u></b> {{joueurData.cite}}, {{joueurData.code}} ,{{joueurData.ville}}</p>
+            <p class="font-italic mb-1"><b><u>Equipe:</u></b> {{joueurData.equipe}} , {{joueurData.ville}} </p>
+            <p class="font-italic mb-1"><b><u>Poste:</u></b> {{joueurData.poste}} </p>
           </div>
           
           <div class="p-4" style="background-color: #f8f9fa; ">

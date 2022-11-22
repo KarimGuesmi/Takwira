@@ -98,6 +98,52 @@
       "email": "ahmed@gmail.de",
       "password": "123456",
       "confirmPassword": "123456"
+    },
+    {
+      "equipe": "manouba united",
+      "nom": "Nasr",
+      "prenom": "Nizar",
+      "poste": "Milieur",
+      "age": 32,
+      "code": "2070",
+      "ville": "Manouba",
+      "telephone": "95668771",
+      "cite": "Maanouba",
+      "email": "nizar@yahoo.com",
+      "password": "10101010",
+      "confirmPassword": "10101010",
+      "acceptTerms": true,
+      "id": 5
+    },
+    {
+      "equipe": "manouba united",
+      "nom": "Amri",
+      "prenom": "Lotfi",
+      "poste": "Attaquant",
+      "age": 35,
+      "telephone": "22666888",
+      "cite": "Manouba",
+      "code": "2070",
+      "ville": "Manouba",
+      "email": "lotfi@yahoo.com",
+      "password": "000000",
+      "id": 6
+    },
+    {
+      "equipe": "manouba united",
+      "nom": "Khedher",
+      "prenom": "Samir",
+      "poste": "Attaquant",
+      "age": 35,
+      "code": "2070",
+      "ville": "Manouba",
+      "telephone": "25252525",
+      "cite": "Manouba",
+      "email": "Samir@yahoo.com",
+      "password": "1111111",
+      "confirmPassword": "1111111",
+      "acceptTerms": true,
+      "id": 7
     }
   ],
   "terrains": [
