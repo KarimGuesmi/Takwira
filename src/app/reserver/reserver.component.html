@@ -12,16 +12,16 @@
                         <p>Remplissez les coordonnées du terrain de votre choix et obtenez une réduction de 20% du total a payer avant 48h du match</p>
                     </div>
                 </div>
-
+ 
                 <!-- Div Of booking -->
                 <div class="col-md-6 col-md-offset-1">
                     <div class="booking-form">
-                        <form>
+                        <form [formGroup]="registerForm">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <span class="form-label">Equipe 1</span>
-                                        <select class="form-control">
+                                        <select class="form-control" formControlName="equipe1">
                                             <option></option>
                                             <option>Gringos United</option>
                                             <option>Goletta Team</option>
@@ -40,7 +40,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <span class="form-label">Equipe 2</span>
-                                        <select class="form-control">
+                                        <select class="form-control" formControlName="equipe2">
                                             <option></option>
                                             <option>Gringos United</option>
                                             <option>Goletta Team</option>
@@ -59,59 +59,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Capitaine 1</span>
-                                        <select class="form-control">
-                                            <option></option>
-                                            <option>Ahmed tahri</option>
-                                            <option>Karim GUESMI</option>
-                                            <option>Nizar Nasr</option>
-                                            <option>Anas hamdi</option>
-                                            <option>Hamza raisi</option>
-                                            <option>Oussama ben othmen</option>
-                                            <option>Rami Jridi</option>
-                                            <option>Youssef Mouihbi</option>
-                                            <option>Issam Faedhel</option>
-                                            <option>Mourad Ben taher</option>
-                                            <option>Fares Ben romdhane</option>
-                                            <option>Adama bamba</option>
-                                            <option>Sabri sallami</option>
-                                            <option>Othmen Ben said</option>
-                                            <option>Goran Petterson</option>
-                                            <option>Slim Ben Miled</option>
-                                        </select>
-                                        <span class="select-arrow"></span>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Capitaine 2</span>
-                                        <select class="form-control">
-                                            <option></option>
-                                            <option>Ahmed tahri</option>
-                                            <option>Karim GUESMI</option>
-                                            <option>Nizar Nasr</option>
-                                            <option>Anas hamdi</option>
-                                            <option>Hamza raisi</option>
-                                            <option>Oussama ben othmen</option>
-                                            <option>Rami Jridi</option>
-                                            <option>Youssef Mouihbi</option>
-                                            <option>Issam Faedhel</option>
-                                            <option>Mourad Ben taher</option>
-                                            <option>Fares Ben romdhane</option>
-                                            <option>Adama bamba</option>
-                                            <option>Sabri sallami</option>
-                                            <option>Othmen Ben said</option>
-                                            <option>Goran Petterson</option>
-                                            <option>Slim Ben Miled</option>
-                                        </select>
-                                        <span class="select-arrow"></span>
-                                    </div>
+                                   
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <span class="form-label">Nom du terrain</span>
-                                        <select class="form-control">
+                                        <select class="form-control" formControlName="terrain">
                                             <option></option>
                                             <option>Ooredoo</option>
                                             <option>San Siro</option>
@@ -125,7 +81,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="tel">
+                                        <input class="form-control" type="tel" formControlName="telephone">
                                         <span class="form-label">Phone</span>
                                     </div>
                                 </div>
@@ -134,13 +90,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="date" required>
+                                        <input class="form-control" type="date" formControlName="date">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <span class="form-label">Choisissez l'heure</span>
-                                        <select class="form-control">
+                                        <select class="form-control" formControlName="heure">
                                             <option></option>
                                             <option>09-10</option>
                                             <option>10-11</option>
@@ -163,11 +119,11 @@
                                 </div>
                             </div>
                             <div class="form-btn">
-                                <button class="submit-btn">Réserver</button>
+                                <button class="submit-btn" (click)="addReservation()">Réserver</button>
                             </div>
                             <br>
                             <div class="form-btn">
-                                <button class="submit-btn" style="background-color:red;" onclick="window.location.href = '';">Annuler</button>
+                                <button class="submit-btn" style="background-color:red;">Annuler</button>
                             </div>
                         </form>
                     </div>

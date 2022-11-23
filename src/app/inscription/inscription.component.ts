@@ -12,6 +12,7 @@ export class InscriptionComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
+
   //
   //joueurFormGroup?:FormGroup;
 
