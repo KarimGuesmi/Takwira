@@ -33,7 +33,7 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 import { OrderModule } from 'ngx-order-pipe';
-
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -72,7 +72,8 @@ import { OrderModule } from 'ngx-order-pipe';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

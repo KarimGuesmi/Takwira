@@ -1,0 +1,11 @@
+<table matSort (matSortChange)="sortData($event)" >
+    <tr>
+      <th>Nom</th>
+      <th mat-sort-header="age">age</th>
+    </tr>
+  
+    <tr *ngFor="let player of sortedData">
+      <td>{{player.name}}</td>
+      <td>{{player.age}}</td>
+    </tr>
+  </table>
