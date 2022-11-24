@@ -1,5 +1,5 @@
 export interface Terrain {
-    code : string;
+    id : number;
     nom : string;
     responsable : string;
     telephone : string;

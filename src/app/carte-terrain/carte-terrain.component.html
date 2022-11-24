@@ -10,8 +10,8 @@
         style="width: 250px; z-index: 1">					  
       </div>
       <div class="ms-3" style="margin-top: 150px;">
-        <h5>Ooredoo Academy</h5>
-        <p>Lac 1, Tunis</p>
+        <h5>{{terrainData.nom}}</h5>
+        <p>{{terrainData.cite}}, {{terrainData.ville}}</p>
       </div>
       </div>
       
@@ -41,7 +41,7 @@
         </button>
       </div>
       <div>
-        <button type="button" class="btn btn-primary btn-block mb-4" onclick="window.location.href = 'listeTerrains.html';" style="width:200px;">
+        <button type="button" class="btn btn-primary btn-block mb-4" routerLink="/liste-terrains" style="width:200px;">
           Retour	
         </button>
       </div>
@@ -52,7 +52,7 @@
         <h2>A propos</h2>
         
         <div class="p-4" style="background-color: #f8f9fa; ">
-        <p class="font-italic mb-1"><b><u>Contact:</u></b> 26 553 000</p>
+        <p class="font-italic mb-1"><b><u>Contact:</u></b> {{terrainData.telephone}}</p>
         <p class="font-italic mb-1"><b><u>Adresse:</u></b> R6MC+29C, Av. principale, Tunis</p>
         <p class="font-italic mb-0"><b><u>Horaires:</u></b> Du Lundi à Dimanche : 09:00 - 00:00 </p>
         </div>

@@ -71,20 +71,6 @@
       "id": 2
     },
     {
-      "equipe": "FC United",
-      "nom": "Ben Yahia",
-      "prenom": "Ahmed",
-      "poste": "Mileu Défensif",
-      "age": 32,
-      "telephone": 22558996,
-      "cite": "Manouba",
-      "code": 2085,
-      "ville": "La Marsa",
-      "email": "karim@gmail.fr",
-      "password": "kar1023",
-      "id": 3
-    },
-    {
       "id": 4,
       "equipe": "Taraji",
       "nom": "Mlik",
@@ -132,39 +118,21 @@
     {
       "equipe": "manouba united",
       "nom": "Khedher",
-      "prenom": "Samir",
+      "prenom": "ahmed",
       "poste": "Attaquant",
       "age": 35,
-      "code": "2070",
-      "ville": "Manouba",
       "telephone": "25252525",
       "cite": "Manouba",
+      "code": "2070",
+      "ville": "Manouba",
       "email": "Samir@yahoo.com",
       "password": "1111111",
-      "confirmPassword": "1111111",
-      "acceptTerms": true,
       "id": 7
-    },
-    {
-      "equipe": "Taraji",
-      "nom": "kamel",
-      "prenom": "ben amor",
-      "poste": "gardien",
-      "age": 33,
-      "code": "2669",
-      "ville": "Bardo",
-      "telephone": "25896374",
-      "cite": "Tadhamen",
-      "email": "kamel@yahoo.fr",
-      "password": "000000",
-      "confirmPassword": "000000",
-      "acceptTerms": true,
-      "id": 8
     }
   ],
   "terrains": [
     {
-      "code": "101020",
+      "id": 1,
       "nom": "Wembley Academy",
       "responsable": "Moneem",
       "telephone": "25698714",
@@ -172,7 +140,7 @@
       "ville": "La Marsa"
     },
     {
-      "code": "101021",
+      "id": 2,
       "nom": "Mouihbi Academy",
       "responsable": "Akrem",
       "telephone": "24556669",
@@ -180,7 +148,7 @@
       "ville": "La Marsa"
     },
     {
-      "code": "101022",
+      "id": 3,
       "nom": "Ooredoo Academy",
       "responsable": "Nizar",
       "telephone": "95668771",
@@ -188,7 +156,7 @@
       "ville": "La Marsa"
     },
     {
-      "code": "101023",
+      "id": 4,
       "nom": "San Siro Academy",
       "responsable": "Fares",
       "telephone": "21889660",
@@ -196,7 +164,7 @@
       "ville": "La marsa"
     },
     {
-      "code": "101024",
+      "id": 5,
       "nom": "Golden Ball Academy",
       "responsable": "Mourad",
       "telephone": "23658761",
@@ -204,7 +172,7 @@
       "ville": "La marsa"
     },
     {
-      "code": "101025",
+      "id": 6,
       "nom": "Juventus Academy",
       "responsable": "Ahmed",
       "telephone": "20369852",
@@ -212,7 +180,7 @@
       "ville": "Ariana"
     },
     {
-      "code": "101026",
+      "id": 7,
       "nom": "Soccer 6",
       "responsable": "Samir",
       "telephone": "29658741",
@@ -292,6 +260,15 @@
       "date": "2022-11-02",
       "heure": "23-00",
       "id": 8
+    },
+    {
+      "equipe1": "Mnihla Team",
+      "equipe2": "AC team",
+      "terrain": "Mouihbi",
+      "telephone": "33666999",
+      "date": "2022-11-18",
+      "heure": "15-16",
+      "id": 9
     }
   ]
 }

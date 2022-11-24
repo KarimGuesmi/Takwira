@@ -32,6 +32,7 @@ import { MeilleursPasseursComponent } from './meilleurs-passeurs/meilleurs-passe
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

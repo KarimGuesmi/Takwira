@@ -17,4 +17,9 @@ export class TerrainService{
         return this.http.get<Terrain[]>(host+"/terrains");
     
     }
+
+    getTerrainFromID(id : number):Observable<Terrain>{
+        let host = environment.host;
+        return this.http.get<Terrain>(host+"/terrains/"+id);
+       }
 }
