@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Passeurs } from '../model/passeurs';
+import { Observable } from 'rxjs';
+import { PasseursService } from '../services/passeurs.service';
 
 @Component({
   selector: 'app-meilleurs-passeurs',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeilleursPasseursComponent implements OnInit {
 
-  constructor() { }
+  passeurs$:Observable<Passeurs[]>;
+  constructor(private passeurService : PasseursService) { }
 
   ngOnInit(): void {
+    this.passeurs$ = this.passeurService.getAllPasseurs();
   }
 
 }

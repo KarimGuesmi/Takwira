@@ -27,3 +27,13 @@ h3{
     width: 10%;
     text-align: center;
 }
+
+tbody {
+    counter-reset: row-num;
+  }
+  table tr {
+    counter-increment: row-num;
+  }
+  table tr td:first-child::before {
+      content: counter(row-num) ". ";
+  }

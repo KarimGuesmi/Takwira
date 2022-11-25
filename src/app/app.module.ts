@@ -35,6 +35,7 @@ import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 import { OrderModule } from 'ngx-order-pipe';
 import {MatSortModule} from '@angular/material/sort';
 
+
 @NgModule({
   declarations: [
     AppComponent,

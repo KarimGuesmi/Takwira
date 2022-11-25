@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Resultats } from '../model/resultats';
+
+import { ResultatsService } from '../services/resultatas.service';
 
 @Component({
   selector: 'app-resultats',
@@ -7,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultatsComponent implements OnInit {
 
-  constructor() { }
+  resultats$:Observable<Resultats[]>;
+  constructor(private resultatsServices : ResultatsService) { }
 
   ngOnInit(): void {
+    this.resultats$ = this.resultatsServices.getAllResultats();
   }
 
 }

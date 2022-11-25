@@ -42,3 +42,13 @@ h3{
     width: 30%;
     text-align: right;
 }
+/* Counter of the table starting from the first football Team*/
+tbody {
+    counter-reset: row-num;
+  }
+  table tr {
+    counter-increment: row-num;
+  }
+  table tr td:first-child::before {
+      content: counter(row-num) ". ";
+  }

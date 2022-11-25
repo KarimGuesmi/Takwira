@@ -37,3 +37,13 @@ th{
 .vide{
     font-size: 12px;
 }
+
+tbody {
+    counter-reset: row-num;
+  }
+  table tr {
+    counter-increment: row-num;
+  }
+  table tr td:first-child::before {
+      content: counter(row-num) ". ";
+  }

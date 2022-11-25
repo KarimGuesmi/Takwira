@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Matches } from '../model/matches';
+import { MatchesService } from '../services/matches.service';
 
 @Component({
   selector: 'app-calendrier',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendrierComponent implements OnInit {
 
-  constructor() { }
+  matches$:Observable<Matches[]>;
+  constructor(private matchesServices : MatchesService) { }
 
   ngOnInit(): void {
+    this.matches$ = this.matchesServices.getAllMatches();
   }
 
 }

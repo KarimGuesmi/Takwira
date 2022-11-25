@@ -8,7 +8,7 @@
     <div style="width: 90%; margin-left: 5px; background-color: rgb(235, 226, 226);">
         <div class="container">
             <h3><u>Classement des meilleurs Butteurs</u></h3>
-            <table class="table">
+            <table class="table" *ngIf="butteurs$">
               <thead>
                 <tr>
                   <th class="num">#</th>
@@ -20,31 +20,12 @@
 
               <!--Best Soccers table - classement -->
               <tbody>
-                <tr class="table-success">
-                    <td class="num">1</td>
-                    <td class="joueurs">Ahmed Ben Ayed</td>
-                    <td class="buts">13</td>
-                    <td class="mp">8</td>
+                <tr class="table-success" *ngFor="let bts of butteurs$ |async">
+                    <td class="num"></td>
+                    <td class="joueurs">{{bts.prenom}} {{bts.nom}}</td>
+                    <td class="buts">{{bts.buts}}</td>
+                    <td class="mp">{{bts.mp}}</td>
                 </tr>
-                <tr class="table-success">
-                    <td class="num">2</td>
-                    <td class="joueurs">Karim Guesmi</td>
-                    <td class="buts">8</td>
-                    <td class="mp">8</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">3</td>
-                    <td class="joueurs">Nizar Nars</td>
-                    <td class="buts">6</td>
-                    <td class="mp">8</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">4</td>
-                    <td class="joueurs">Mourad Tahri</td>
-                    <td class="buts">3</td>
-                    <td class="mp">8</td>
-                </tr>
-               
             </tbody>
           </table>
         </div>

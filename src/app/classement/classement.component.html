@@ -8,7 +8,7 @@
     <div style="width: 90%; margin-left: 5px; background-color: rgb(235, 226, 226);">
         <div class="container">
             <h3><u>Le classement du tournois</u></h3>
-            <table class="table">
+            <table class="table" *ngIf="classement$">
               <thead>
                 <tr>
                   <th class="num">#</th>
@@ -24,67 +24,16 @@
 
               <!--Teams table - classement -->
               <tbody>
-                <tr class="table-success">
-                    <td class="num">1</td>
-                    <td class="equipes">Ariana United</td>
-                    <td class="buts">21</td>
-                    <td class="mp">8</td>
-                    <td class="v">4</td>
-                    <td class="n">2</td>
-                    <td class="d">2</td>
-                    <td class="pts">18</td>
+                <tr class="table-success" *ngFor="let cls of classement$ |async" >
+                    <td class="num"></td>
+                    <td class="equipes">{{ cls.equipe }}</td>
+                    <td class="buts">{{ cls.buts }}</td>
+                    <td class="mp">{{ cls.mp }}</td>
+                    <td class="v">{{ cls.v }}</td>
+                    <td class="n">{{ cls.n }}</td>
+                    <td class="d">{{ cls.d }}</td>
+                    <td class="pts">{{ cls.pts }}</td>
                 </tr>
-                <tr class="table-success">
-                    <td class="num">2</td>
-                    <td class="equipes">Bardo FC</td>
-                    <td class="buts">33</td>
-                    <td class="mp">8</td>
-                    <td class="v">2</td>
-                    <td class="n">4</td>
-                    <td class="d">2</td>
-                    <td class="pts">10</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">3</td>
-                    <td class="equipes">Marsa FC</td>
-                    <td class="buts">12</td>
-                    <td class="mp">8</td>
-                    <td class="v">2</td>
-                    <td class="n">3</td>
-                    <td class="d">3</td>
-                    <td class="pts">9</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">4</td>
-                    <td class="equipes">United ITK</td>
-                    <td class="buts">14</td>
-                    <td class="mp">8</td>
-                    <td class="v">1</td>
-                    <td class="n">5</td>
-                    <td class="d">2</td>
-                    <td class="pts">8</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">5</td>
-                    <td class="equipes">Manouba Team</td>
-                    <td class="buts">9</td>
-                    <td class="mp">8</td>
-                    <td class="v">1</td>
-                    <td class="n">4</td>
-                    <td class="d">3</td>
-                    <td class="pts">7</td>
-                </tr>
-                <tr class="table-success">
-                    <td class="num">6</td>
-                    <td class="equipes">Mexicanos</td>
-                    <td class="buts">7</td>
-                    <td class="mp">8</td>
-                    <td class="v">1</td>
-                    <td class="n">2</td>
-                    <td class="d">6</td>
-                    <td class="pts">5</td>
-                </tr>
-               
             </tbody>
           </table>
         </div>

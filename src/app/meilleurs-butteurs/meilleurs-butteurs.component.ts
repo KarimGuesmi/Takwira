@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Butteurs } from '../model/butteurs';
+import { Observable } from 'rxjs';
+import { ButteursService } from '../services/butteurs.service';
 
 @Component({
   selector: 'app-meilleurs-butteurs',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeilleursButteursComponent implements OnInit {
 
-  constructor() { }
+  butteurs$:Observable<Butteurs[]>;
+  constructor(private butteursService: ButteursService ) { }
 
   ngOnInit(): void {
+    this.butteurs$ = this.butteursService.getAllButteurs();
   }
 
 }
