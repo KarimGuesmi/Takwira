@@ -8,23 +8,22 @@
     <div style="width: 90%; margin-left: 5px; background-color: rgb(235, 226, 226);">
         <div class="container">
             <h3><u>Le classement du tournois</u></h3>
-            <table class="table" *ngIf="classement$">
+            <table class="table"   *ngIf="classement$" > 
               <thead>
                 <tr>
                   <th class="num">#</th>
                   <th class="equipes">Equipes</th>                  
-                  <th class="buts">Buts</th>
+                  <th class="buts" (click)="sort('buts')">Buts&nbsp;<i class="fa fa-sort"></i></th>
                   <th class="mp">MP</th>
-                  <th class="v">V</th>
-                  <th class="n">N</th>
-                  <th class="d">D</th>
-                  <th class="pts">Pts</th>
+                  <th class="v" (click)="sort('v')" >V&nbsp;<i class="fa fa-sort"></i></th>
+                  <th class="n" (click)="sort('n')">N&nbsp;<i class="fa fa-sort"></i></th>
+                  <th class="d" (click)="sort('d')">D&nbsp;<i class="fa fa-sort"></i></th>
+                  <th class="pts" (click)="sort('pts')">Pts &nbsp;<i class="fa fa-sort"></i></th> 
                 </tr>
               </thead>
 
-              <!--Teams table - classement -->
               <tbody>
-                <tr class="table-success" *ngFor="let cls of classement$ |async" >
+                <tr class="table-success" *ngFor="let cls of classement$ |async |orderBy:key:reverse" >
                     <td class="num"></td>
                     <td class="equipes">{{ cls.equipe }}</td>
                     <td class="buts">{{ cls.buts }}</td>

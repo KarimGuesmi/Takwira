@@ -34,6 +34,8 @@ import { GestionMatchesComponent } from './gestion-matches/gestion-matches.compo
 import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 import { OrderModule } from 'ngx-order-pipe';
 import {MatSortModule} from '@angular/material/sort';
+import { MatTableModule } from "@angular/material/table";
+
 
 
 @NgModule({
@@ -74,7 +76,8 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     FormsModule,
     OrderModule,
-    MatSortModule
+    MatSortModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

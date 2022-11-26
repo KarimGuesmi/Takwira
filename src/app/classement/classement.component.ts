@@ -4,6 +4,9 @@ import { Classement } from '../model/classement';
 import { ClassementService } from '../services/classement.service';
 import { Observable } from 'rxjs';
 import {Sort} from '@angular/material/sort';
+
+
+
 @Component({
   selector: 'app-classement',
   templateUrl: './classement.component.html',
@@ -13,8 +16,8 @@ export class ClassementComponent implements OnInit {
   itemsClassement : string[];
   
   classement$:Observable<Classement[]>;
-  
-  constructor(private classementService: ClassementService , private router:Router) {
+
+  constructor(private classementService: ClassementService) {
     this.itemsClassement = ["#","Equipes","Buts","MP","V","N","D","Pts"];
     
    }
@@ -22,5 +25,14 @@ export class ClassementComponent implements OnInit {
   ngOnInit(): void {
     this.classement$=this.classementService.getAllClassement();
     
+    this.sort('pts');
+    
   }
+  key:string = 'pts';
+  reverse :boolean =false;
+  sort(key:string){
+    this.key=key;
+    this.reverse = !this.reverse;
+  }
+ 
 }
