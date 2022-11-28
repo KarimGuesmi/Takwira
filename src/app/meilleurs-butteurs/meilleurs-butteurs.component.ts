@@ -11,10 +11,19 @@ import { ButteursService } from '../services/butteurs.service';
 export class MeilleursButteursComponent implements OnInit {
 
   butteurs$:Observable<Butteurs[]>;
+  
   constructor(private butteursService: ButteursService ) { }
 
   ngOnInit(): void {
     this.butteurs$ = this.butteursService.getAllButteurs();
+    this.sort('buts');
+  }
+
+  key:string = 'buts';
+  reverse :boolean =false;
+  sort(key:string){
+    this.key=key;
+    this.reverse = !this.reverse;
   }
 
 }

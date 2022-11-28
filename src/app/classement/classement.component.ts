@@ -6,19 +6,17 @@ import { Observable } from 'rxjs';
 import {Sort} from '@angular/material/sort';
 
 
-
 @Component({
   selector: 'app-classement',
   templateUrl: './classement.component.html',
   styleUrls: ['./classement.component.css']
 })
 export class ClassementComponent implements OnInit {
-  itemsClassement : string[];
   
   classement$:Observable<Classement[]>;
 
   constructor(private classementService: ClassementService) {
-    this.itemsClassement = ["#","Equipes","Buts","MP","V","N","D","Pts"];
+    
     
    }
 

@@ -15,6 +15,14 @@ export class MeilleursPasseursComponent implements OnInit {
 
   ngOnInit(): void {
     this.passeurs$ = this.passeurService.getAllPasseurs();
+    this.sort('passes');
+    
+  }
+  key:string = 'passes';
+  reverse :boolean =false;
+  sort(key:string){
+    this.key=key;
+    this.reverse = !this.reverse;
   }
 
 }

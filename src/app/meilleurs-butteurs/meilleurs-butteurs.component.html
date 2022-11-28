@@ -13,14 +13,14 @@
                 <tr>
                   <th class="num">#</th>
                   <th class="joueurs">Nom Du Joueur</th>                  
-                  <th class="buts">Buts</th>
+                  <th class="buts" (click)="sort('buts')">Buts&nbsp;<i class="fa fa-sort"></i></th>
                   <th class="mp">MP</th>
                 </tr>
               </thead>
 
               <!--Best Soccers table - classement -->
               <tbody>
-                <tr class="table-success" *ngFor="let bts of butteurs$ |async">
+                <tr class="table-success" *ngFor="let bts of butteurs$ |async |orderBy:key:reverse">
                     <td class="num"></td>
                     <td class="joueurs">{{bts.prenom}} {{bts.nom}}</td>
                     <td class="buts">{{bts.buts}}</td>
