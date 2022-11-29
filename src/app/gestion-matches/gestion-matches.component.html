@@ -12,121 +12,143 @@
             </div>
             <div class="line2">
                 <div class="box1"><h5>Ajouter un match</h5>
-                    <form>
+                    <form [formGroup]="registerFormMatche">
                         <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01">
-                              <option selected>Equipe 1</option>
-                              <option value="1">United Team</option>
-                              <option value="2">Ariana FC</option>
-                              <option value="3">Gammarth Club</option>
+                            <select class="form-select" id="inputGroupSelect01" formControlName="equipe1">
+
+                              <option value="United Team">United Team</option>
+                              <option value="Ariana FC">Ariana FC</option>
+                              <option value="Gammarth Club">Gammarth Club</option>
+                              <option value="United ITK">United ITK</option>
+                              <option value="Mexicanos">Mexicanos</option>
+                              <option value="Ivorien FC">Ivorien FC</option>
+                              <option value="African Club">African Club</option>
                             </select>
                           </div>
                           <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01">
-                              <option selected>Equipe 2</option>
-                              <option value="1">United Team</option>
-                              <option value="2">Ariana FC</option>
-                              <option value="3">Gammarth Club</option>
+                            <select class="form-select" id="inputGroupSelect01" formControlName="equipe2">
+                              
+                              <option value="United Team">United Team</option>
+                              <option value="Ariana FC">Ariana FC</option>
+                              <option value="Gammarth Club">Gammarth Club</option>
+                              <option value="United ITK">United ITK</option>
+                              <option value="Mexicanos">Mexicanos</option>
+                              <option value="Ivorien FC">Ivorien FC</option>
+                              <option value="African Club">African Club</option>
                             </select>
                           </div>
                         <div  class="mb-3">
-                            <input type="date" id="date" name="date">
+                            <input type="date" id="date" name="date" formControlName="date">
                         </div>
                         <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01">
-                              <option selected>Heure</option>
-                              <option value="1">09-10</option>
-                              <option value="2">10-11</option>
-                              <option value="3">11-12</option>
-                              <option value="3">12-13</option>
-                              <option value="3">13-14</option>
-                              <option value="3">14-15</option>
-                              <option value="3">15-16</option>
-                              <option value="3">16-17</option>
-                              <option value="3">17-18</option>
-                              <option value="3">18-19</option>
-                              <option value="3">19-20</option>
-                              <option value="3">20-21</option>
-                              <option value="3">21-22</option>
-                              <option value="3">22-23</option>
-                              <option value="3">23-00</option>
+                            <select class="form-select" id="inputGroupSelect01" formControlName="heure">
+                              
+                              <option value="09h - 10h">09-10</option>
+                              <option value="10h - 11h">10-11</option>
+                              <option value="11h - 12h">11-12</option>
+                              <option value="12h - 13h">12-13</option>
+                              <option value="13h - 14h">13-14</option>
+                              <option value="14h - 15h">14-15</option>
+                              <option value="15h - 16h">15-16</option>
+                              <option value="16h - 17h">16-17</option>
+                              <option value="17h - 18h">17-18</option>
+                              <option value="18h - 19h">18-19</option>
+                              <option value="19h - 20h">19-20</option>
+                              <option value="20h - 21h">20-21</option>
+                              <option value="21h - 22h">21-22</option>
+                              <option value="22h - 23h">22-23</option>
+                              <option value="23h - 00h">23-00</option>
                             </select>
                           </div>
                           <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01">
-                              <option selected>Terrain</option>
-                              <option value="1">Wembley</option>
-                              <option value="2">Gammarth</option>
-                              <option value="3">Mouihbi Club</option>
-                              <option value="3">Golden Ball</option>
-                              <option value="3">Sukra Club</option>
-                              <option value="3">Mannouba</option>
-                              <option value="3">Ariana</option>
-                              <option value="3">Juventus</option>
+                            <select class="form-select" id="inputGroupSelect01" formControlName="terrain">
+                              
+                              <option value="Wembley">Wembley</option>
+                              <option value="Gammarth">Gammarth</option>
+                              <option value="Mouihbi Club">Mouihbi Club</option>
+                              <option value="Golden Ball">Golden Ball</option>
+                              <option value="Sukra Club">Sukra Club</option>
+                              <option value="Mannouba">Mannouba</option>
+                              <option value="Ariana">Ariana</option>
+                              <option value="Juventus">Juventus</option>
                             </select>
                           </div>
-                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                        <button class="btn btn-primary" (click)="onSubmitMatche()">Ajouter</button>
                       </form>
                 </div>
 
                 <!--Ajouter un résultat-->
                 <div class="box2"><h5>Ajouter un résultat</h5>
-                  <form action="">
+                  <form [formGroup]="registerFormResultat">
                     <div class="input-group mb-3">
-                        <select class="form-select" id="inputGroupSelect01">
-                          <option selected>Equipe 1</option>
-                          <option value="1">United Team</option>
-                          <option value="2">Ariana FC</option>
-                          <option value="3">Gammarth Club</option>
+                        <select class="form-select" id="inputGroupSelect01" formControlName="equipe1">
+                          
+                          <option value="United Team">United Team</option>
+                          <option value="Ariana FC">Ariana FC</option>
+                          <option value="Gammarth Club">Gammarth Club</option>
+                          <option value="United ITK">United ITK</option>
+                          <option value="Mexicanos">Mexicanos</option>
+                          <option value="Ivorien FC">Ivorien FC</option>
+                          <option value="African Club">African Club</option>
                         </select>
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe1">
                       </div>
                       <div class="input-group mb-3" style="margin-top: 21%;">
-                        <select class="form-select" id="inputGroupSelect01">
-                          <option selected>Equipe 2</option>
-                          <option value="1">United Team</option>
-                          <option value="2">Ariana FC</option>
-                          <option value="3">Gammarth Club</option>
+                        <select class="form-select" id="inputGroupSelect01" formControlName="equipe2">
+                          
+                          <option value="United Team">United Team</option>
+                          <option value="Ariana FC">Ariana FC</option>
+                          <option value="Gammarth Club">Gammarth Club</option>
+                          <option value="United ITK">United ITK</option>
+                          <option value="Mexicanos">Mexicanos</option>
+                          <option value="Ivorien FC">Ivorien FC</option>
+                          <option value="African Club">African Club</option>
                         </select>
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe2">
                       </div>
-                      <button type="submit" class="btn btn-primary">Ajouter</button>
+                      <button class="btn btn-primary" (click)="onSubmitResultat()">Ajouter</button>
                   </form>
                 </div>
 
                 <!--Ajouter Un butteur-->
                 <div class="box3"><h5>Ajouter un butteur</h5>
-                  <form action="">
+                  <form [formGroup]="registerFormButteur">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nom du Joueur">
+                        <input type="text" class="form-control" placeholder="Nom du Joueur" formControlName="nom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Prénom du Joueur">
+                        <input type="text" class="form-control" placeholder="Prénom du Joueur" formControlName="prenom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts">
+                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="buts">
                       </div>
-                      <button type="submit" class="btn btn-primary" style="margin-top: 10%;">Ajouter</button>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de matches" formControlName="mp">
+                      </div>
+                      <button type="submit" class="btn btn-primary" (click)="onSubmitButteur()">Ajouter</button>
                     </form>
                 </div>
                 
                 <!--Ajouter un passeur-->
                 <div class="box4"><h5>Ajouter un passeur</h5>
-                  <form action="">
+                  <form [formGroup]="registerFormPasseur">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nom du passeur">
+                        <input type="text" class="form-control" placeholder="Nom du passeur" formControlName="nom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Prénom du passeur">
+                        <input type="text" class="form-control" placeholder="Prénom du passeur" formControlName="prenom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de passes">
+                        <input type="text" class="form-control" placeholder="Nombre de passes" formControlName="passes">
                       </div>
-                      <button type="submit" class="btn btn-primary" style="margin-top: 10%;">Ajouter</button>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de matches" formControlName="mp">
+                      </div>
+                      <button class="btn btn-primary" (click)="onSubmitPasseur()">Ajouter</button>
                     </form>
                 </div>
             </div>

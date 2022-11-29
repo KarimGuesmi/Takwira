@@ -16,4 +16,9 @@ export class MatchesService{
         let host=environment.host;
         return this.http.get<Matches[]>(host+"/matches");
     }
+
+    saveMatche(matche : Matches):Observable<Matches>{
+        let host = environment.host;
+        return this.http.post<Matches>(host+"/matches", matche);
+    }
 }

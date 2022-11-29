@@ -15,4 +15,9 @@ export class PasseursService{
         let host=environment.host;
         return this.http.get<Passeurs[]>(host+"/passeurs");
     }
+
+    savePasseur(passeur : Passeurs):Observable<Passeurs>{
+        let host = environment.host;
+        return this.http.post<Passeurs>(host+"/passeurs", passeur);
+    }
 }

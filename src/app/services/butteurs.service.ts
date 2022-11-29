@@ -15,4 +15,9 @@ export class ButteursService{
         let host=environment.host;
         return this.http.get<Butteurs[]>(host+"/butteurs");
     }
+
+    saveButteur(butteur : Butteurs):Observable<Butteurs>{
+        let host = environment.host;
+        return this.http.post<Butteurs>(host+"/butteurs", butteur);
+    }
 }

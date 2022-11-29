@@ -16,4 +16,9 @@ export class ResultatsService{
         let host=environment.host;
         return this.http.get<Resultats[]>(host+"/resultats");
     }
+
+    saveResultat(resultat : Resultats):Observable<Resultats>{
+        let host = environment.host;
+        return this.http.post<Resultats>(host+"/resultats", resultat);
+    }
 }
