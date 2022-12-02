@@ -7,5 +7,5 @@ export class Butteurs {
     buts:number;
     mp:number;
     
-    
+
 }

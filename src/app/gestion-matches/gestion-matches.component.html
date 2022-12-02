@@ -93,7 +93,7 @@
                         </select>
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe1">
+                        <input type="number" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe1">
                       </div>
                       <div class="input-group mb-3" style="margin-top: 21%;">
                         <select class="form-select" id="inputGroupSelect01" formControlName="equipe2">
@@ -108,7 +108,7 @@
                         </select>
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe2">
+                        <input type="number" class="form-control" placeholder="Nombre de buts" formControlName="butsEquipe2">
                       </div>
                       <button class="btn btn-primary" (click)="onSubmitResultat()">Ajouter</button>
                   </form>
@@ -124,10 +124,10 @@
                         <input type="text" class="form-control" placeholder="Prénom du Joueur" formControlName="prenom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de buts" formControlName="buts">
+                        <input type="number" class="form-control" placeholder="Nombre de buts" formControlName="buts">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de matches" formControlName="mp">
+                        <input type="number" class="form-control" placeholder="Nombre de matches" formControlName="mp">
                       </div>
                       <button type="submit" class="btn btn-primary" (click)="onSubmitButteur()">Ajouter</button>
                     </form>
@@ -143,10 +143,10 @@
                         <input type="text" class="form-control" placeholder="Prénom du passeur" formControlName="prenom">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de passes" formControlName="passes">
+                        <input type="number" class="form-control" placeholder="Nombre de passes" formControlName="passes">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de matches" formControlName="mp">
+                        <input type="number" class="form-control" placeholder="Nombre de matches" formControlName="mp">
                       </div>
                       <button class="btn btn-primary" (click)="onSubmitPasseur()">Ajouter</button>
                     </form>

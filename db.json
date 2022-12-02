@@ -424,58 +424,65 @@
     {
       "nom": "Fersi",
       "prenom": "Nidhal",
-      "buts": "9",
-      "mp": "8",
+      "buts": 9,
+      "mp": 8,
       "id": 5
     },
     {
       "nom": "Mouradi",
       "prenom": "Naceur",
-      "buts": "4",
-      "mp": "8",
+      "buts": 4,
+      "mp": 8,
       "id": 6
     },
     {
       "nom": "Salem",
       "prenom": "Ahmed",
-      "buts": "4",
-      "mp": "8",
+      "buts": 4,
+      "mp": 8,
       "id": 7
     },
     {
       "nom": "Ben Amor",
       "prenom": "Mohsen",
-      "buts": "3",
-      "mp": "8",
+      "buts": 3,
+      "mp": 8,
       "id": 8
     },
     {
       "nom": "Ben Saber",
       "prenom": "Sami",
-      "buts": "2",
-      "mp": "8",
+      "buts": 2,
+      "mp": 8,
       "id": 9
     },
     {
       "nom": "Abidi",
       "prenom": "Souhail",
-      "buts": "2",
-      "mp": "8",
+      "buts": 2,
+      "mp": 8,
       "id": 10
     },
     {
       "nom": "Touihri",
       "prenom": "Ahmed",
-      "buts": "1",
-      "mp": "8",
+      "buts": 1,
+      "mp": 8,
       "id": 11
     },
     {
       "nom": "Traoré",
       "prenom": "José",
-      "buts": "1",
-      "mp": "8",
+      "buts": 1,
+      "mp": 8,
       "id": 12
+    },
+    {
+      "nom": "Ben Sabeur",
+      "prenom": "Mahmoud",
+      "buts": 21,
+      "mp": 8,
+      "id": 13
     }
   ],
   "passeurs": [
@@ -510,58 +517,65 @@
     {
       "nom": "Talbi",
       "prenom": "Akrem",
-      "passes": "6",
-      "mp": "8",
+      "passes": 6,
+      "mp": 8,
       "id": 5
     },
     {
       "nom": "fathi",
       "prenom": "tifefi",
-      "passes": "3",
-      "mp": "8",
+      "passes": 3,
+      "mp": 8,
       "id": 6
     },
     {
       "nom": "Clayton",
       "prenom": "Perreira",
-      "passes": "3",
-      "mp": "8",
+      "passes": 3,
+      "mp": 8,
       "id": 7
     },
     {
       "nom": "Ben salah",
       "prenom": "Mourad",
-      "passes": "2",
-      "mp": "8",
+      "passes": 2,
+      "mp": 8,
       "id": 8
     },
     {
       "nom": "Ben Mohammed",
       "prenom": "Hamza",
-      "passes": "1",
-      "mp": "8",
+      "passes": 1,
+      "mp": 8,
       "id": 9
     },
     {
       "nom": "Salhi",
       "prenom": "Moneem",
-      "passes": "1",
-      "mp": "8",
+      "passes": 1,
+      "mp": 8,
       "id": 10
     },
     {
       "nom": "Abdi",
       "prenom": "Rafik",
-      "passes": "1",
-      "mp": "8",
+      "passes": 1,
+      "mp": 8,
       "id": 11
     },
     {
       "nom": "Fersi",
       "prenom": "Hichem",
-      "passes": "1",
-      "mp": "8",
+      "passes": 1,
+      "mp": 8,
       "id": 12
+    },
+    {
+      "nom": "Talbi",
+      "prenom": "Miled",
+      "passes": 13,
+      "mp": 8,
+      "id": 13
     }
   ],
   "resultats": [
@@ -595,30 +609,30 @@
     },
     {
       "equipe1": "Ariana FC",
-      "butsEquipe1": "2",
+      "butsEquipe1": 2,
       "equipe2": "Gammarth Club",
-      "butsEquipe2": "0",
+      "butsEquipe2": 0,
       "id": 5
     },
     {
       "equipe1": "African Club",
-      "butsEquipe1": "5",
+      "butsEquipe1": 5,
       "equipe2": "United ITK",
-      "butsEquipe2": "2",
+      "butsEquipe2": 2,
       "id": 6
     },
     {
       "equipe1": "Ivorien FC",
-      "butsEquipe1": "1",
+      "butsEquipe1": 1,
       "equipe2": "Ariana FC",
-      "butsEquipe2": "2",
+      "butsEquipe2": 2,
       "id": 7
     },
     {
       "equipe1": "United ITK",
-      "butsEquipe1": "1",
+      "butsEquipe1": 1,
       "equipe2": "African Club",
-      "butsEquipe2": "0",
+      "butsEquipe2": 0,
       "id": 8
     }
   ],
