@@ -1,4 +1,4 @@
-export interface Terrain {
+export class Terrain {
     id : number;
     nom : string;
     responsable : string;

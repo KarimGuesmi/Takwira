@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 //import terrainData from '../terrains.json';
 import { Terrain } from '../model/terrainmodel';
@@ -40,18 +41,10 @@ export class ListeTerrainsComponent implements OnInit {
 
   terrains$:Observable<Terrain[]>;
 
-  constructor(private terrainsService: TerrainService) { 
+  constructor(private terrainsService: TerrainService, private router:Router) { 
    
     this.itemsTerrains = ["code terrain","nom du terrain","Responsable","Télephone","Cité","Ville","Action"];
-    /*
-    this.terrain1=["101020","Wembley Academy","Moneem","25444888","Bhar Lazreg","La marsa"];
-    this.terrain2=["101021","Mouihbi Academy","Akrem","24556669","Rolley","La marsa"];
-    this.terrain3=["101022","Ooredoo Academy","Nizar","95668771","Lac 1","La marsa"];
-    this.terrain4=["101023","San Siro Academy","Fares","21889660","Lac 1","La marsa"];
-    this.terrain5=["101024","Golden Ball Academy","Mourad","23658761","Ain Zaghane","La marsa"];
-    this.terrain6=["101025","Juventus Academy","Ahmed","20369852","Menzah 1","Ariana"];
-    this.terrain7=["101026","Soccer 6","Samir","29658741","Cité Hlel","Ariana"];
-    */
+    
   }
 
   ngOnInit(): void {
@@ -61,4 +54,16 @@ export class ListeTerrainsComponent implements OnInit {
     //Better version
     this.terrains$=this.terrainsService.getAllStadiums();
   }
+ 
+  onDelete( id:any){
+    this.terrainsService.deleteTerrain(id).subscribe(
+      (data)=>{
+      this.onGetAllStadiums();
+    });
+  }
+
+  onSubmitUpdate(id : number){
+    this.router.navigate(['/updateterrain',id]);
+  }
+
 }

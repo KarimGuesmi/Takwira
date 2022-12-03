@@ -24,6 +24,7 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 import { GestionMatchesComponent } from './gestion-matches/gestion-matches.component';
 
 import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
+import { UpdateterrainComponent } from './updateterrain/updateterrain.component';
 
 const routes: Routes = [
 
@@ -49,6 +50,7 @@ const routes: Routes = [
   {path : "gestion-matches", component : GestionMatchesComponent},
   {path : "test", component : TestComponent},
   {path : "updatejoueur/:id", component : UpdatejoueurComponent},
+  {path : "updateterrain/:id", component : UpdateterrainComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];
 

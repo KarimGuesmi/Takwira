@@ -35,6 +35,7 @@ import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 import { OrderModule } from 'ngx-order-pipe';
 import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule } from "@angular/material/table";
+import { UpdateterrainComponent } from './updateterrain/updateterrain.component';
 
 
 
@@ -65,7 +66,8 @@ import { MatTableModule } from "@angular/material/table";
     MeilleursPasseursComponent,
     CalendrierComponent,
     GestionMatchesComponent,
-    UpdatejoueurComponent
+    UpdatejoueurComponent,
+    UpdateterrainComponent
   ],
   imports: [
     BrowserModule,

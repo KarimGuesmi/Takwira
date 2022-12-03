@@ -1,0 +1,32 @@
+
+	<h5><u>Modification d'un Terrain</u></h5>
+	<form [formGroup]="formUpdate">
+		<div class="row g-3 align-items-center">
+			<div class="col-auto">
+				<input type="text" id="id" class="form-control" placeholder="id" formControlName="id">
+			</div>
+			
+			<div class="col-auto">
+				<input type="text" id="nom" class="form-control" placeholder="nom" formControlName="nom">
+			</div>
+
+			<div class="col-auto">
+				<input type="text" id="responsable" class="form-control" placeholder="responsable" formControlName="responsable">
+			</div>
+			
+			<div class="col-auto">
+				<input type="text" id="telephone" class="form-control" placeholder="telephone" formControlName="telephone">
+			</div>
+			<div class="col-auto">
+				<input type="text" id="cite" class="form-control" placeholder="cite" formControlName="cite">
+			</div>
+			
+			<div class="col-auto">
+				<input type="text" id="ville" class="form-control" placeholder="ville" formControlName="ville">
+			</div>
+			
+			<button type="submit" class="btn btn-primary" 
+            (click)="onSubmitUpdate(id)"
+            style="width: 300px;margin-left: 39%;">Confirmer</button>
+		</div>
+	</form>

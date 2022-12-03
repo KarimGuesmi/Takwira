@@ -1,13 +1,5 @@
 <h1>Voici la liste des Terrains</h1>
 
-<!-- I don' t need this, i prefer this table is loaded once i click ont the button navBar option
-<div class="buttonServer">
-	<div class="btn-group" role="group" aria-label="Basic example">
-		<button (click)="onGetAllStadiums()" type="button" class="btn btn-primary">All</button>
-	</div>
-	</div>
--->
-
 <table class="table table-striped" *ngIf="terrains$">
     <thead>
       <tr>
@@ -23,40 +15,15 @@
             <td>{{ terrain.telephone }}</td>  
             <td>{{ terrain.cite }}</td>  
             <td>{{ terrain.ville }}</td>  
-            <td><button type="button" class="btn btn-primary mb-2" routerLink="/carte-terrain/{{terrain.id}}">Consulter</button></td>   
+            <td>
+                <button type="button" class="btn btn-primary mb-2" routerLink="/carte-terrain/{{terrain.id}}">Consulter</button>
+                <button type="button" class="btn btn-secondary mb-2" (click)="onSubmitUpdate(terrain.id)">Modifier</button> 
+				        <button type="button" class="btn btn-danger mb-2" (click)="onDelete(terrain.id)">Supprimer</button>
+            </td>   
+            
           </tr> 
 
-        <!--
-            -- Remplissage statique de tout les terrains
-            <tr>
-                <td *ngFor="let terrain of terrain1">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain2">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain3">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2" routerLink="/carte-terrain">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain4">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain5">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain6">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-            <tr>
-                <td *ngFor="let terrain of terrain7">{{terrain}}</td>
-                <td><button type="button" class="btn btn-primary mb-2">Consulter</button></td>   
-            </tr>
-        -->
+       
     </tbody>
     
   </table>

@@ -22,4 +22,13 @@ export class TerrainService{
         let host = environment.host;
         return this.http.get<Terrain>(host+"/terrains/"+id);
        }
+
+    deleteTerrain(id : number){
+        let host = environment.host;
+        return this.http.delete(host+"/terrains/"+id);
+    }
+    onUpdateTerrain(id:number, tr:Terrain):Observable<Terrain>{
+        let host = environment.host;
+        return this.http.put<Terrain>(host+"/terrains/"+id,tr);
+    }
 }

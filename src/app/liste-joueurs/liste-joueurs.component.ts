@@ -26,7 +26,6 @@ export class ListeJoueursComponent implements OnInit {
   //name = 'Angular';  
   //joueurs: Joueur[] = joueursData;  
 
-
   joueurs$:Observable<Joueur[]>;
   
   constructor(private joueursService: JoueurService , private router:Router) { 

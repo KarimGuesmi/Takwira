@@ -11,7 +11,7 @@ import { Joueur } from '../test/joueur';
 })
 export class UpdatejoueurComponent implements OnInit {
 
-  id:number;
+  id:number; 
   formUpdate : FormGroup;
 
   constructor(private route:ActivatedRoute , private joueurservice:JoueurService, private fb:FormBuilder, private router:Router) { 
