@@ -26,6 +26,8 @@ import { GestionMatchesComponent } from './gestion-matches/gestion-matches.compo
 import { UpdatejoueurComponent } from './updatejoueur/updatejoueur.component';
 import { UpdateterrainComponent } from './updateterrain/updateterrain.component';
 
+import { FullcalendarComponent } from './fullcalendar/fullcalendar.component';
+
 const routes: Routes = [
 
   {path : "home", component : HomeComponent},
@@ -51,6 +53,7 @@ const routes: Routes = [
   {path : "test", component : TestComponent},
   {path : "updatejoueur/:id", component : UpdatejoueurComponent},
   {path : "updateterrain/:id", component : UpdateterrainComponent},
+  {path : "fullcalendar", component : FullcalendarComponent},
   {path : "" , redirectTo : "home" , pathMatch : "full"}
 ];
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -36,7 +36,12 @@ import { OrderModule } from 'ngx-order-pipe';
 import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule } from "@angular/material/table";
 import { UpdateterrainComponent } from './updateterrain/updateterrain.component';
-
+import { FullcalendarComponent } from './fullcalendar/fullcalendar.component';
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+import { DxSchedulerModule } from 'devextreme-angular';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+​
 
 
 @NgModule({
@@ -67,7 +72,8 @@ import { UpdateterrainComponent } from './updateterrain/updateterrain.component'
     CalendrierComponent,
     GestionMatchesComponent,
     UpdatejoueurComponent,
-    UpdateterrainComponent
+    UpdateterrainComponent,
+    FullcalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -79,9 +85,13 @@ import { UpdateterrainComponent } from './updateterrain/updateterrain.component'
     FormsModule,
     OrderModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    FullCalendarModule ,
+    DxSchedulerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);
+​

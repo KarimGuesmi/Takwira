@@ -1,0 +1,25 @@
+<!--
+<div style="width: 90%; padding-left: 20%;">
+<full-calendar 
+[options]="calendarOptions"
+
+[events]="[
+    { title: 'event 1', date: '2022-12-30' },
+    { title: 'Wembley Academy', date: '2022-12-20' , color:'red'},
+    { title: 'Ooredoo Academy', date: '2022-12-20' }
+  ]"
+></full-calendar>
+</div>
+-->
+<div style="width: 90%; padding-left: 20%;">
+    <dx-scheduler
+    timeZone="Africa/Tunis"
+    [dataSource]="appointmentsData"
+    [views]="['day', 'week', 'workWeek', 'month']"
+    currentView="month"
+    [currentDate]="currentDate"
+    [startDayHour]="9"
+    [height]="600"
+    >
+    </dx-scheduler>
+</div>

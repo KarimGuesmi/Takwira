@@ -4,12 +4,12 @@ import {HttpClient} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Joueur } from '../model/joueurmodel';
-
-
+import {AuthResponse} from '../model/authResponse'
 
 
 @Injectable({providedIn:"root"})
 export class JoueurService{
+ 
     constructor(private http:HttpClient){
 
     }
@@ -45,4 +45,11 @@ export class JoueurService{
     let host = environment.host;
     return this.http.put<Joueur>(host+"/joueurs/"+id,jr);
    }
+
+   connect(email : String , password : String):Observable<AuthResponse>{
+     let host = environment.host;
+     return this.http.post<AuthResponse>(host+"/login",{email:email,password:password});
+   }
+
+
 }

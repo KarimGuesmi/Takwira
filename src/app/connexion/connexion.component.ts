@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { JoueurService } from '../services/joueurs.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ConnexionComponent implements OnInit {
   submitted = false;
 
   //Add user form actions
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private joueurServ:JoueurService) { }
 
   get f() { return this.registerForm.controls; }
   onSubmit() {
@@ -27,8 +28,16 @@ export class ConnexionComponent implements OnInit {
   //True if all the fields are filled
   if(this.submitted)
   {
-    alert("Bravo Karim c'est très bien :))) !!");
+    //alert("Bravo Karim c'est très bien :))) !!");
   }
+
+  this.joueurServ.connect(this.registerForm.controls['email'].value, this.registerForm.controls['password'].value).subscribe(
+    (jrres)=>{
+      console.log(jrres.acessToken);
+      console.log(jrres.joueur.nom);
+      
+    }
+  );
  
 }
   ngOnInit(): void {
@@ -42,10 +51,5 @@ export class ConnexionComponent implements OnInit {
   //Images
   image:any="../assets/images/takwira.png" ;
   buffon:any="../assets/images/buffon.png" ;
-
-  
-
-    
- 
        
 }
