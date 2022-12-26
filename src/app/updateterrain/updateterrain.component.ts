@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Terrain } from '../model/terrainmodel';
 import { TerrainService } from '../services/terrains.service';
-import { Joueur } from '../test/joueur';
+import { Joueur } from '../model/joueurmodel';
 
 @Component({
   selector: 'app-updateterrain',

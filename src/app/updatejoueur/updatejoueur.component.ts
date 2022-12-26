@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JoueurService } from '../services/joueurs.service';
-import { Joueur } from '../test/joueur';
+import { Joueur } from '../model/joueurmodel';
 
 @Component({
   selector: 'app-updatejoueur',

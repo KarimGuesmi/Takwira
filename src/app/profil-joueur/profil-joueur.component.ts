@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { JoueurService } from '../services/joueurs.service';
-import { Joueur } from '../test/joueur';
+import { Joueur } from '../model/joueurmodel';
 
 @Component({
   selector: 'app-profil-joueur',

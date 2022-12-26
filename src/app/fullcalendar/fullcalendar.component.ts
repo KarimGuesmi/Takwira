@@ -19,7 +19,7 @@ export class FullcalendarComponent implements OnInit {
 
   appointmentsData: Appointment[];
 
-  currentDate: Date = new Date(2022, 12, 10);
+  currentDate: Date = new Date(2022, 11, 31);
 
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
@@ -30,13 +30,16 @@ export class FullcalendarComponent implements OnInit {
       selectable: true,
       weekends:true,
       events: [
-        { title: 'Meeting', start: new Date() }
+        { title: 'Meeting', start: new Date() },
+       
       ]
   };
   
-
+  
+  
   constructor(service: Service) {
     this.appointmentsData = service.getAppointments(); 
+    
     //Adding new terrains in the planning
     /*this.appointmentsData.push({
       text: 'Juventus Academy',
@@ -45,8 +48,8 @@ export class FullcalendarComponent implements OnInit {
     });
   */
   }
-
   
+
 
   ngOnInit(): void {
     

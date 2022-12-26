@@ -53,7 +53,7 @@
       "code": 2085,
       "ville": "La Marsa",
       "email": "karim@gmail.fr",
-      "password": "10101010",
+      "password": "20202020",
       "id": 1
     },
     {
@@ -131,20 +131,6 @@
     },
     {
       "equipe": "FC United",
-      "nom": "Sabri",
-      "prenom": "Issam",
-      "poste": "Mileu Défensif",
-      "age": 32,
-      "telephone": 22558996,
-      "cite": "Manouba",
-      "code": 2085,
-      "ville": "La Marsa",
-      "email": "k@gmail.com",
-      "password": "10",
-      "id": 8
-    },
-    {
-      "equipe": "FC United",
       "nom": "Naoufel",
       "prenom": "Ayedi",
       "poste": "Mileu Défensif",
@@ -156,20 +142,6 @@
       "email": "k@gmail.com",
       "password": "10",
       "id": 9
-    },
-    {
-      "equipe": "FC United",
-      "nom": "Naoufel",
-      "prenom": "Ayedi",
-      "poste": "Mileu Défensif",
-      "age": 32,
-      "telephone": 22558996,
-      "cite": "Manouba",
-      "code": 2085,
-      "ville": "La Marsa",
-      "email": "k@gmail.com",
-      "password": "10",
-      "id": 10
     },
     {
       "equipe": "FC United",
@@ -247,39 +219,6 @@
       "id": 17
     },
     {
-      "equipe": "haha",
-      "nom": "string",
-      "prenom": "string",
-      "poste": "string",
-      "age": 20,
-      "telephone": 777888999,
-      "cite": "string",
-      "code": 1220,
-      "ville": "string",
-      "email": "aa@hot.fr",
-      "password": "aa",
-      "id": 18
-    },
-    {
-      "equipe": "haha",
-      "nom": "string",
-      "prenom": "string",
-      "poste": "string",
-      "age": 20,
-      "telephone": 777888999,
-      "cite": "string",
-      "code": 1220,
-      "ville": "string",
-      "email": "aa@hot.fr",
-      "password": "aa",
-      "id": 19
-    },
-    {
-      "email": "k@gmail.com",
-      "password": "10101010",
-      "id": 20
-    },
-    {
       "equipe": "FC United",
       "nom": "Naoufel",
       "prenom": "Ayedi",
@@ -323,11 +262,27 @@
       "username": "momo",
       "password": "momo10",
       "id": 23
+    },
+    {
+      "equipe": "Mexicanos",
+      "nom": "Baraketi",
+      "prenom": "Marwen",
+      "poste": "Gardien",
+      "age": 26,
+      "code": "2077",
+      "ville": "Ariana",
+      "telephone": "25889774",
+      "cite": "Ward",
+      "email": "k@k",
+      "password": "222222",
+      "confirmPassword": "222222",
+      "acceptTerms": true,
+      "id": 24
     }
   ],
   "terrains": [
     {
-      "nom": "Wembley Academy",
+      "nom": "Academy",
       "responsable": "Fahmi",
       "telephone": "25698715",
       "cite": "Bhar Lazreg",
@@ -359,20 +314,12 @@
       "ville": "La marsa"
     },
     {
-      "nom": "Golden Ball Academy",
+      "nom": "Golden Ball ",
       "responsable": "Moez",
       "telephone": "23658761",
       "cite": "Ain Zaghane",
       "ville": "La marsa",
       "id": 5
-    },
-    {
-      "nom": "Juventus Academyy",
-      "responsable": "Mourad",
-      "telephone": "20369852",
-      "cite": "Menzah 2",
-      "ville": "Ariana",
-      "id": 6
     }
   ],
   "reservation": [
@@ -670,6 +617,20 @@
       "buts": 21,
       "mp": 8,
       "id": 13
+    },
+    {
+      "nom": "Naffeti",
+      "prenom": "Ahmed",
+      "buts": 4,
+      "mp": 8,
+      "id": 14
+    },
+    {
+      "nom": "Chaouachi",
+      "prenom": "Hamdi",
+      "buts": 7,
+      "mp": 8,
+      "id": 15
     }
   ],
   "passeurs": [
